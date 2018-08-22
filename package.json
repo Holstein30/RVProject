@@ -1,0 +1,19 @@
+{
+  "name": "rvproject",
+  "version": "1.0.0",
+  "description": "Project for Red Ventures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zarnerz/RVProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zarnerz/RVProject/issues"
+  },
+  "homepage": "https://github.com/Zarnerz/RVProject#readme"
+}
