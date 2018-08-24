@@ -26,6 +26,17 @@ function renderData(data) {
         <h1>${dealer.data.name}</h1>
         <section>
             <h1>${dealer.data.phone1}</h1>
+            <p>Can't talk now? Click below to send an email.</p>
+            <button class="contact-dealer">Contact this Pro</button>
+            <section>
+                <h1>Business Hours</h1>
+                <p>Weekdays ${dealer.data.weekHours.mon}</p>
+                <p>Saturdays ${dealer.data.weekHours.sat}</p>
+                <p>Sundays ${dealer.data.weekHours.sun}</p>
+            </section>
+            <section>
+               certifications
+            </section>
         </section>
     </li>`;
   });
