@@ -18,8 +18,19 @@ function fetchData() {
 }
 
 function renderData(data) {
-  let name = data.dealers[0].data.name;
-  document.getElementById("dealer-cards").innerHTML = name;
+  let dealerContainer = document.getElementById("dealers-container");
+  let dealerList = `<ul>`;
+  data.dealers.map(dealer => {
+    dealerList += `
+    <li>
+        <h1>${dealer.data.name}</h1>
+        <section>
+            <h1>${dealer.data.phone1}</h1>
+        </section>
+    </li>`;
+  });
+  dealerList += `</ul>`;
+  dealerContainer.innerHTML = dealerList;
 }
 
 fetchData();
