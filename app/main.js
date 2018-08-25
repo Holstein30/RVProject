@@ -1,6 +1,7 @@
 // Main JS Functionality
 
 // !Event Handlers
+
 // Navigation Events
 // Filter Events
 // Dealer Section Events
@@ -63,7 +64,9 @@ function renderData(data) {
         <section>
             <h1>${dealer.data.phone1}</h1>
             <p>Can't talk now? Click below to send an email.</p>
-            <button class="contact-dealer">Contact this Pro</button>
+            <button class="contact-dealer" value="${
+              dealer.data.name
+            }" onClick="contactDealerEvent(this)">Contact this Pro</button>
             <section>
                 <h1>Business Hours</h1>
                 <p>Weekdays ${dealer.data.weekHours.mon}</p>
@@ -85,6 +88,11 @@ function certifications(data) {
     return `<p>${certs}</p>`;
   });
   return returnCerts;
+}
+
+function contactDealerEvent(selectedPro) {
+  let proName = selectedPro.value;
+  console.log(proName);
 }
 
 fetchData();
