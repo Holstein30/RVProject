@@ -92,7 +92,9 @@ function certifications(data) {
 
 function contactDealerEvent(selectedPro) {
   let proName = selectedPro.value;
-  console.log(proName);
+  document
+    .querySelectorAll(".modal-pro-name")
+    .forEach(el => (el.innerHTML = proName));
 }
 
 fetchData();
