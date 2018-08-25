@@ -97,6 +97,14 @@ function contactDealerEvent(selectedPro) {
     .forEach(el => (el.innerHTML = proName));
 }
 
+document.getElementById("modal-submit").addEventListener("click", e => {
+  e.preventDefault();
+  document
+    .querySelectorAll('input[data-inputs="modal-input"')
+    .forEach(input => (input.value = ""));
+  document.querySelector("textarea").value = "";
+});
+
 fetchData();
 // Build HTML Elements
 // Render All

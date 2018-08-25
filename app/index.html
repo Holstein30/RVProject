@@ -100,15 +100,16 @@
     </section>
     <section>
       <p>Fill out the form below and <span class="modal-pro-name"></span> will get in touch.</p>
-      <form action="#">
+      <form class="modal-form" action="#">
         First and last name
-        <input type="text" name="full-name" required /> Phone number
-        <input type="tel" name="phone" required /> Email address
-        <input type="email" name="email" required /> Comments or questions
-        <textarea name="comments" id="modal-comments" cols="30" rows="10"></textarea> Do you currently own a pool or spa?
+        <input type="text" name="full-name" data-inputs="modal-input" required /> Phone number
+        <input type="tel" name="phone" data-inputs="modal-input" required /> Email address
+        <input type="email" name="email" data-inputs="modal-input" required /> Comments or questions
+        <textarea name="comments" id="modal-comments" cols="30" rows="10" data-inputs="modal-input"></textarea> Do you currently
+        own a pool or spa?
         <span>Yes <input type="radio" name="modal-radio" /></span>
         <span>No <input type="radio" name="modal-radio" /></span>
-        <input type="submit" value="Send my email" />
+        <input type="submit" value="Send my email" id="modal-submit" />
       </form>
     </section>
     <section>
