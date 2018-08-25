@@ -27,6 +27,15 @@ function filterData(data) {
     values.push(el.value);
   });
   console.log(values);
+  // let certData = data.dealers.data.certifications
+  // if (values.length !== certData.length)
+  //     return false;
+  // for (var i = values.length; i--;) {
+  //     if (values[i] !== certData[i])
+  //         return false;
+  // }
+
+  // return true;
 }
 
 function renderData(data) {
