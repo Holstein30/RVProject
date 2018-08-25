@@ -13,8 +13,20 @@ function fetchData() {
     res.json().then(data => {
       //update the rendered cards with the correct dealers based on the filter
       renderData(data);
+      filterData(data);
     });
   });
+}
+
+function filterData(data) {
+  let checkboxes = document.querySelectorAll(
+      'input[name="filter-checkbox"]:checked'
+    ),
+    values = [];
+  checkboxes.forEach.call(checkboxes, function(el) {
+    values.push(el.value);
+  });
+  console.log(values);
 }
 
 function renderData(data) {
