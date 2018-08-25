@@ -12,7 +12,6 @@ function fetchData() {
   fetch("./dealers.json").then(res => {
     res.json().then(data => {
       //update the rendered cards with the correct dealers based on the filter
-      renderData(data);
       checkboxValue(data);
     });
   });
@@ -29,7 +28,13 @@ function filterData(values, data) {
     }
     return true;
   });
-  console.log(filter);
+  let filteredResults = [];
+  let filterResults = filter.map((bool, i) => {
+    if (bool) {
+      filteredResults.push(data.dealers[i]);
+    }
+  });
+  renderData(filteredResults);
 }
 
 function checkboxValue(data) {
@@ -46,7 +51,7 @@ function checkboxValue(data) {
 function renderData(data) {
   let dealerContainer = document.getElementById("dealers-container");
   let dealerList = `<ul>`;
-  data.dealers.map(dealer => {
+  data.map(dealer => {
     dealerList += `
     <li>
         <h1>${dealer.data.name}</h1>
