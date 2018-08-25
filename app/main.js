@@ -34,6 +34,11 @@ function filterData(values, data) {
       filteredResults.push(data.dealers[i]);
     }
   });
+  if (filteredResults.length === 0) {
+    data.dealers.map(dealer => {
+      filteredResults.push(dealer);
+    });
+  }
   renderData(filteredResults);
 }
 
