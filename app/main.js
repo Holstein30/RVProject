@@ -35,13 +35,20 @@ function renderData(data) {
                 <p>Sundays ${dealer.data.weekHours.sun}</p>
             </section>
             <section>
-               certifications
+               ${certifications(dealer.data.certifications)}
             </section>
         </section>
     </li>`;
   });
   dealerList += `</ul>`;
   dealerContainer.innerHTML = dealerList;
+}
+
+function certifications(data) {
+  let returnCerts = data.map(certs => {
+    return `<p>${certs}</p>`;
+  });
+  return returnCerts;
 }
 
 fetchData();
