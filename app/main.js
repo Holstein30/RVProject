@@ -12,13 +12,37 @@ function fetchData() {
   fetch("./dealers.json").then(res => {
     res.json().then(data => {
       //update the rendered cards with the correct dealers based on the filter
-      renderData(data);
-      filterData(data);
+      checkboxValue(data);
     });
   });
 }
 
-function filterData(data) {
+function filterData(values, data) {
+  let filter = data.dealers.map(dealer => {
+    let certData = dealer.data.certifications;
+    if (values.length !== certData.length) return false;
+    let valuesSorted = values.sort();
+    let certDataSorted = certData.sort();
+    for (var i = values.length; i--; ) {
+      if (valuesSorted[i] !== certDataSorted[i]) return false;
+    }
+    return true;
+  });
+  let filteredResults = [];
+  let filterResults = filter.map((bool, i) => {
+    if (bool) {
+      filteredResults.push(data.dealers[i]);
+    }
+  });
+  if (filteredResults.length === 0) {
+    data.dealers.map(dealer => {
+      filteredResults.push(dealer);
+    });
+  }
+  renderData(filteredResults);
+}
+
+function checkboxValue(data) {
   let checkboxes = document.querySelectorAll(
       'input[name="filter-checkbox"]:checked'
     ),
@@ -26,22 +50,13 @@ function filterData(data) {
   checkboxes.forEach.call(checkboxes, function(el) {
     values.push(el.value);
   });
-  console.log(values);
-  // let certData = data.dealers.data.certifications
-  // if (values.length !== certData.length)
-  //     return false;
-  // for (var i = values.length; i--;) {
-  //     if (values[i] !== certData[i])
-  //         return false;
-  // }
-
-  // return true;
+  filterData(values, data);
 }
 
 function renderData(data) {
   let dealerContainer = document.getElementById("dealers-container");
   let dealerList = `<ul>`;
-  data.dealers.map(dealer => {
+  data.map(dealer => {
     dealerList += `
     <li>
         <h1>${dealer.data.name}</h1>
