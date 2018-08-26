@@ -19,7 +19,7 @@ header.navigation {
   width: 100%;
 }
 
-.main-banner {
+img.main-banner {
   overflow: hidden;
 }
 
@@ -28,8 +28,16 @@ header.navigation {
 }
 
 nav {
+  padding-bottom: 2em;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+
   .nav-logo {
-    width: 30%;
+    width: 10em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0.5em;
+    top: 1.2em;
   }
 
   aside {
@@ -46,9 +54,32 @@ nav {
     }
   }
 
+  a {
+    position: relative;
+    left: 2em;
+    top: 1em;
+    height: 0.5em;
+    border: 2px solid color(primary);
+    background-color: #fff;
+    border-radius: 2px;
+    color: color(primary);
+    padding: 0.6em;
+    text-decoration: none;
+    font-size: 0.8em;
+
+    img {
+      height: 1.2em;
+      width: 1.1em;
+      vertical-align: middle;
+      padding-right: 0.5em;
+    }
+  }
+
   .menu-icon {
     float: right;
-    width: 20%;
+    position: relative;
+    right: 1em;
+    width: 4.7em;
   }
 }
 
@@ -101,7 +132,6 @@ section#dealers-container {
 
     li {
       box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
 
       h1 {
         padding-top: 1em;

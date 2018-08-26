@@ -8,7 +8,7 @@ header.navigation {
   width: 100%;
 }
 
-.main-banner {
+img.main-banner {
   overflow: hidden;
 }
 
@@ -16,8 +16,19 @@ header.navigation {
   display: none;
 }
 
+nav {
+  padding-bottom: 2em;
+  -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+}
+
 nav .nav-logo {
-  width: 30%;
+  width: 10em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0.5em;
+  top: 1.2em;
 }
 
 nav aside {
@@ -34,9 +45,32 @@ nav aside a {
   font-size: 17px;
 }
 
+nav a {
+  position: relative;
+  left: 2em;
+  top: 1em;
+  height: 0.5em;
+  border: 2px solid #005dff;
+  background-color: #fff;
+  border-radius: 2px;
+  color: #005dff;
+  padding: 0.6em;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+nav a img {
+  height: 1.2em;
+  width: 1.1em;
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+
 nav .menu-icon {
   float: right;
-  width: 20%;
+  position: relative;
+  right: 1em;
+  width: 4.7em;
 }
 
 section.filter-section h1 {
@@ -89,8 +123,6 @@ section#dealers-container ul {
 section#dealers-container ul li {
   -webkit-box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 section#dealers-container ul li h1 {
