@@ -150,14 +150,36 @@ section.filter-section {
   padding-top: 1.2em;
 }
 
+@media (min-width: 900px) {
+  section.filter-section {
+    background-color: rgba(230, 230, 230, 0.3);
+    border-radius: 5px;
+    padding-bottom: 1em;
+    width: 90vw;
+  }
+}
+
 section.filter-section h1 {
   display: inline;
   font-size: 1.2em;
 }
 
-section.filter-section h1:first-child {
+@media (min-width: 900px) {
+  section.filter-section h1 {
+    padding-left: 4.4em;
+    font-size: 1.4em;
+  }
+}
+
+section.filter-section h1:nth-of-type(1) {
   color: #005dff;
   margin: 0.5em;
+}
+
+@media (min-width: 900px) {
+  section.filter-section h1:nth-of-type(1) {
+    margin-right: 1em;
+  }
 }
 
 section.filter-section h1:nth-of-type(2) {
@@ -168,6 +190,17 @@ section.filter-section h1:nth-of-type(2) {
   background-color: #fff;
 }
 
+@media (min-width: 900px) {
+  section.filter-section h1:nth-of-type(2) {
+    border: none;
+    border-left: 1px solid rgba(230, 230, 230, 0.5);
+    padding: 0;
+    padding-left: 1em;
+    background-color: inherit;
+    font-size: 1.5em;
+  }
+}
+
 section.filter-section ul {
   list-style-type: none;
   padding: 0;
@@ -176,8 +209,31 @@ section.filter-section ul {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+@media (min-width: 900px) {
+  section.filter-section ul {
+    border: none;
+    float: right;
+    position: relative;
+    right: 3em;
+    bottom: 1.2em;
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 section.filter-section ul li {
   margin-bottom: 10px;
+}
+
+@media (min-width: 900px) {
+  section.filter-section ul li {
+    float: left;
+    font-size: 1.3em;
+    position: relative;
+    top: 0.4em;
+    padding: 0 0.3em;
+  }
 }
 
 section.filter-section ul li input {
@@ -194,6 +250,14 @@ section.filter-section ul li input {
 section.filter-section ul li span img {
   width: 1.1em;
   vertical-align: bottom;
+}
+
+@media (min-width: 900px) {
+  section.filter-section ul li span img {
+    height: 1.2em;
+    width: 1.2em;
+    padding-left: 0.2em;
+  }
 }
 
 article#dealers-container {
