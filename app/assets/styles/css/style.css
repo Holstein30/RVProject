@@ -132,6 +132,7 @@ section.filter-section ul li span img {
 
 article#dealers-container {
   text-align: center;
+  margin-bottom: 2em;
 }
 
 article#dealers-container section {
@@ -353,7 +354,7 @@ article.modal div section {
   padding: 1em;
 }
 
-article.modal div section p span {
+article.modal div section p span.modal-circle {
   float: right;
 }
 
