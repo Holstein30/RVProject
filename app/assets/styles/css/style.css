@@ -8,6 +8,12 @@ main {
   background-color: rgba(230, 230, 230, 0.3);
 }
 
+@media (min-width: 900px) {
+  main {
+    background-color: #fff;
+  }
+}
+
 header.navigation {
   width: 100%;
 }
@@ -36,9 +42,25 @@ nav .nav-logo {
   top: 1.2em;
 }
 
+@media (min-width: 900px) {
+  nav .nav-logo {
+    padding: 0 3em;
+  }
+}
+
 nav aside {
   float: left;
   display: none;
+}
+
+@media (min-width: 900px) {
+  nav aside {
+    display: inline-block;
+    float: none;
+    position: relative;
+    left: 20em;
+    top: 1em;
+  }
 }
 
 nav aside a {
@@ -50,7 +72,17 @@ nav aside a {
   font-size: 17px;
 }
 
-nav a {
+@media (min-width: 900px) {
+  nav aside a {
+    float: left;
+    padding: 0;
+    color: #005dff;
+    border: none;
+    padding: 0 1.5em;
+  }
+}
+
+nav a.nav-btn-anchor {
   position: relative;
   left: 2em;
   top: 1em;
@@ -64,11 +96,39 @@ nav a {
   font-size: 0.8em;
 }
 
-nav a img {
+@media (min-width: 900px) {
+  nav a.nav-btn-anchor {
+    position: relative;
+    left: 29em;
+    padding: 0.8em 1em;
+  }
+}
+
+nav a.nav-btn-anchor img {
   height: 1.2em;
   width: 1.1em;
   vertical-align: middle;
   padding-right: 0.5em;
+}
+
+@media (min-width: 900px) {
+  nav a.nav-btn-anchor img {
+    height: 1.2em;
+    width: 0.9em;
+    padding-right: 0.3em;
+    position: relative;
+    bottom: 0.1em;
+  }
+}
+
+nav a.nav-btn-anchor .nav-btn-span {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  nav a.nav-btn-anchor .nav-btn-span {
+    display: inline;
+  }
 }
 
 nav .menu-icon {
@@ -76,6 +136,12 @@ nav .menu-icon {
   position: relative;
   right: 0.5em;
   width: 4.7em;
+}
+
+@media (min-width: 900px) {
+  nav .menu-icon {
+    display: none;
+  }
 }
 
 section.filter-section {
