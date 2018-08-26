@@ -204,3 +204,40 @@ section.connect-container {
     }
   }
 }
+
+section.info-container {
+  background-color: color(primary);
+  text-align: center;
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8em;
+  }
+
+  img {
+    height: 1em;
+    width: 1em;
+    padding-left: 0.3em;
+    vertical-align: top;
+  }
+}
+
+footer {
+  background-color: color(primary);
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+
+  p {
+    display: inline;
+    font-size: 0.7em;
+    padding: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}

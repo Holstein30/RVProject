@@ -207,4 +207,41 @@ section.connect-container div div img {
   height: 1em;
   padding: 0.5em;
 }
+
+section.info-container {
+  background-color: #005dff;
+  text-align: center;
+  padding: 1em;
+}
+
+section.info-container a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8em;
+}
+
+section.info-container img {
+  height: 1em;
+  width: 1em;
+  padding-left: 0.3em;
+  vertical-align: top;
+}
+
+footer {
+  background-color: #005dff;
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+}
+
+footer p {
+  display: inline;
+  font-size: 0.7em;
+  padding: 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */
