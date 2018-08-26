@@ -103,30 +103,47 @@
   </footer>
 
   <!-- Email Modal -->
-  <article class="modal hidden">
-    <section>
-      <p>Email</p>
-      <!-- Pro Name -->
-      <h1 class="modal-pro-name"></h1>
-    </section>
-    <section>
-      <p>Fill out the form below and <span class="modal-pro-name"></span> will get in touch.</p>
-      <form class="modal-form" action="#">
-        First and last name
-        <input type="text" name="full-name" data-inputs="modal-input" required /> Phone number
-        <input type="tel" name="phone" data-inputs="modal-input" required /> Email address
-        <input type="email" name="email" data-inputs="modal-input" required /> Comments or questions
-        <textarea name="comments" id="modal-comments" cols="30" rows="10" data-inputs="modal-input"></textarea> Do you currently
-        own a pool or spa?
-        <span>Yes <input type="radio" name="modal-radio" /></span>
-        <span>No <input type="radio" name="modal-radio" /></span>
-        <input type="submit" value="Send my email" id="modal-submit" />
-      </form>
-    </section>
-    <section>
-      <p>"Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
-        Summus brains sit​​. Zombie ipsum reversus ab viral inferno, nam rick grimes malum.</p>
-    </section>
+  <article class="modal">
+    <div>
+      <header>
+        <p>Email</p>
+        <!-- Pro Name -->
+        <h1 class="modal-pro-name"></h1>
+      </header>
+      <section>
+        <p>Fill out the form below and <span class="modal-pro-name"></span> will get in touch.</p>
+        <form class="modal-form" action="#">
+          <p>First and last name
+            <span>
+              <img src="./assets/images/circle-form.png" />
+            </span>
+          </p>
+          <input type="text" name="full-name" data-inputs="modal-input" required />
+          <p>Phone number
+            <span>
+              <img src="./assets/images/circle-form.png" />
+            </span>
+          </p>
+          <input type="tel" name="phone" data-inputs="modal-input" required />
+          <p>Email address
+            <span>
+              <img src="./assets/images/circle-form.png" />
+            </span>
+          </p>
+          <input type="email" name="email" data-inputs="modal-input" required />
+          <p>Comments or questions<span>Optional</span></p>
+          <textarea name="comments" id="modal-comments" cols="30" rows="10" data-inputs="modal-input"></textarea>
+          <p>Do you currently own a pool or spa? </p>
+          <span>Yes <input type="radio" name="modal-radio" /></span>
+          <span>No <input type="radio" name="modal-radio" /></span>
+          <p><input type="submit" value="Send my email" id="modal-submit" /> </p>
+        </form>
+      </section>
+      <footer>
+        <p>"Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
+          Summus brains sit​​. Zombie ipsum reversus ab viral inferno, nam rick grimes malum.</p>
+      </footer>
+    </div>
   </article>
 
   <script src="./main.js"></script>
