@@ -1,3 +1,80 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+header.navigation {
+  width: 100%;
+}
+
+.main-banner {
+  overflow: hidden;
+}
+
 .hidden {
   display: none;
 }
+
+nav .nav-logo {
+  width: 30%;
+}
+
+nav aside {
+  float: left;
+  display: none;
+}
+
+nav aside a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav .menu-icon {
+  float: right;
+  width: 20%;
+}
+
+section.filter-section h1 {
+  display: inline;
+  font-size: 1.5em;
+}
+
+section.filter-section h1:first-child {
+  color: #005dff;
+}
+
+section.filter-section h1:nth-of-type(2) {
+  border: 1px solid #000;
+}
+
+section.filter-section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.filter-section ul li {
+  margin-bottom: 10px;
+}
+
+section.filter-section ul li input {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: bottom;
+}
+
+section.filter-section ul li span img {
+  width: 1.1em;
+  vertical-align: bottom;
+}
+/*# sourceMappingURL=style.css.map */

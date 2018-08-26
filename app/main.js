@@ -91,6 +91,7 @@ function certifications(data) {
 }
 
 function contactDealerEvent(selectedPro) {
+  document.querySelector(".modal").classList.remove("hidden");
   let proName = selectedPro.value;
   document
     .querySelectorAll(".modal-pro-name")
@@ -103,6 +104,7 @@ document.getElementById("modal-submit").addEventListener("click", e => {
     .querySelectorAll('input[data-inputs="modal-input"')
     .forEach(input => (input.value = ""));
   document.querySelector("textarea").value = "";
+  // document.querySelector(".modal").classList.add("hidden");
 });
 
 fetchData();

@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Zarnerz/RVProject/issues"
   },
-  "homepage": "https://github.com/Zarnerz/RVProject#readme"
+  "homepage": "https://github.com/Zarnerz/RVProject#readme",
+  "dependencies": {}
 }

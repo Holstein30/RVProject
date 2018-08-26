@@ -1,0 +1,94 @@
+$colors: (
+  primary: #005dff,
+  primary-light: lighten(#005dff, 40%),
+  primary-dark: darken(#005dff, 40%),
+  accent: #fff6bb
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+header.navigation {
+  width: 100%;
+}
+
+.main-banner {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  .nav-logo {
+    width: 30%;
+  }
+
+  aside {
+    float: left;
+    display: none;
+
+    a {
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  }
+
+  .menu-icon {
+    float: right;
+    width: 20%;
+  }
+}
+
+section.filter-section {
+  h1 {
+    display: inline;
+    font-size: 1.5em;
+  }
+
+  h1:first-child {
+    color: color(primary);
+  }
+
+  h1:nth-of-type(2) {
+    border: 1px solid #000;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      input {
+        display: inline-block;
+        margin-left: max(10px);
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 50%;
+        width: 1.3em;
+        height: 1.3em;
+        vertical-align: bottom;
+      }
+
+      span img {
+        width: 1.1em;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
