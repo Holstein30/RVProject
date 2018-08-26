@@ -3,7 +3,10 @@ $colors: (
   primary-light: lighten(#005dff, 40%),
   primary-dark: darken(#005dff, 40%),
   accent: rgba(230, 230, 230, 0.5),
-  bg-light: rgba(230, 230, 230, 0.3)
+  accent-dark: rgba(150, 150, 150, 0.5),
+  bg-light: rgba(230, 230, 230, 0.3),
+  bg-dark: rgba(0, 0, 0, 0.4),
+  submit: #00ffaa
 );
 
 @function color($color-name) {
@@ -307,12 +310,19 @@ article.modal {
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
-  top: 0;
+  top: -5em;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: color(bg-dark);
+  text-align: justify;
+
+  header {
+    background-color: color(primary-dark);
+    color: #fff;
+    padding: 2em 1em;
+    margin: 0;
+  }
 
   img {
     height: 1em;
@@ -321,11 +331,59 @@ article.modal {
 
   div {
     background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 0;
     border: 1px solid #888;
-    width: 80%;
-    text-align: center;
+    width: 93%;
+
+    section {
+      padding: 1em;
+
+      p {
+        span {
+          float: right;
+        }
+      }
+
+      input,
+      textarea {
+        border: 1px solid color(accent-dark);
+        width: 100%;
+      }
+    }
+
+    p.p-radio {
+      margin: 1em 0 0 0;
+    }
+
+    div.modal-radios {
+      display: grid;
+      grid-template-columns: 25%;
+      grid-template-areas: "primary secondary third fourth";
+      border: none;
+      text-align: justify;
+      margin-left: 0.1em;
+
+      label:nth-of-type(1) {
+        grid-area: primary;
+      }
+
+      label:nth-of-type(2) {
+        grid-area: secondary;
+      }
+
+      input {
+        position: relative;
+        top: 1.2em;
+      }
+    }
+
+    #modal-submit {
+      border: none;
+      background-color: #fff;
+      text-align: right;
+      color: color(submit);
+    }
 
     footer {
       display: none;
