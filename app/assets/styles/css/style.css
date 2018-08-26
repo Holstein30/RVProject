@@ -77,4 +77,134 @@ section.filter-section ul li span img {
   width: 1.1em;
   vertical-align: bottom;
 }
+
+section#dealers-container {
+  text-align: center;
+}
+
+section#dealers-container ul {
+  list-style-type: none;
+}
+
+section#dealers-container ul li {
+  -webkit-box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section#dealers-container ul li h1 {
+  padding-top: 1em;
+}
+
+section#dealers-container ul li section a {
+  background-color: #005dff;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+section#dealers-container ul li section a img {
+  height: 1.7em;
+  width: 1.7em;
+  padding-right: 1em;
+  vertical-align: middle;
+}
+
+section#dealers-container ul li section button {
+  border: 1px solid #ccdfff;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #001333;
+  padding: 1em;
+  text-decoration: none;
+}
+
+section#dealers-container ul li section button img {
+  height: 1.2em;
+  width: 1.5em;
+  padding-right: 1em;
+  vertical-align: middle;
+}
+
+section#dealers-container ul li section section.hours-section {
+  margin-bottom: 3em;
+}
+
+section#dealers-container ul li section section.certs-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "primary secondary" "third fourth";
+}
+
+section#dealers-container ul li section section.certs-section p:nth-of-type(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: primary;
+}
+
+section#dealers-container ul li section section.certs-section p:nth-of-type(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: secondary;
+}
+
+section#dealers-container ul li section section.certs-section p:nth-of-type(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: third;
+}
+
+section#dealers-container ul li section section.certs-section p:nth-of-type(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: fourth;
+}
+
+section.connect-container {
+  background-color: #001333;
+  color: #fff;
+  text-align: center;
+}
+
+section.connect-container img {
+  height: 2em;
+  width: 13em;
+  margin-top: 2em;
+}
+
+section.connect-container div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "primary secondary";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.connect-container div h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: primary;
+  font-size: 1em;
+}
+
+section.connect-container div div {
+  display: inline-block;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: secondary;
+  line-height: 67px;
+}
+
+section.connect-container div div img {
+  width: 1em;
+  height: 1em;
+  padding: 0.5em;
+}
 /*# sourceMappingURL=style.css.map */

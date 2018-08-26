@@ -92,3 +92,115 @@ section.filter-section {
     }
   }
 }
+
+section#dealers-container {
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+
+      h1 {
+        padding-top: 1em;
+      }
+
+      section {
+        a {
+          background-color: color(primary);
+          border-radius: 5px;
+          color: white;
+          padding: 0.5em;
+          text-decoration: none;
+
+          //   span {
+          //     // resize font
+          //   }
+          img {
+            height: 1.7em;
+            width: 1.7em;
+            padding-right: 1em;
+            vertical-align: middle;
+          }
+        }
+        button {
+          border: 1px solid color(primary-light);
+          background-color: #fff;
+          border-radius: 5px;
+          color: color(primary-dark);
+          padding: 1em;
+          text-decoration: none;
+
+          img {
+            height: 1.2em;
+            width: 1.5em;
+            padding-right: 1em;
+            vertical-align: middle;
+          }
+        }
+        section.hours-section {
+          margin-bottom: 3em;
+        }
+
+        section.certs-section {
+          display: grid;
+          grid-template-columns: 50% auto;
+
+          grid-template-areas:
+            "primary secondary"
+            "third fourth";
+
+          p:nth-of-type(1) {
+            grid-area: primary;
+          }
+          p:nth-of-type(2) {
+            grid-area: secondary;
+          }
+          p:nth-of-type(3) {
+            grid-area: third;
+          }
+          p:nth-of-type(4) {
+            grid-area: fourth;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.connect-container {
+  background-color: color(primary-dark);
+  color: #fff;
+  text-align: center;
+
+  img {
+    height: 2em;
+    width: 13em;
+    margin-top: 2em;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary secondary";
+    align-items: center;
+
+    h1 {
+      grid-area: primary;
+      font-size: 1em;
+    }
+
+    div {
+      display: inline-block;
+      grid-area: secondary;
+      line-height: 67px;
+      img {
+        width: 1em;
+        height: 1em;
+        padding: 0.5em;
+      }
+    }
+  }
+}

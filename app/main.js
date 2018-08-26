@@ -62,18 +62,20 @@ function renderData(data) {
     <li>
         <h1>${dealer.data.name}</h1>
         <section>
-            <h1>${dealer.data.phone1}</h1>
+            <a href="#"><img src="./assets/images/phone-icon-mobile.png" /><span>Tap to Call</span>${
+              dealer.data.phone1
+            }</a>
             <p>Can't talk now? Click below to send an email.</p>
             <button class="contact-dealer" value="${
               dealer.data.name
-            }" onClick="contactDealerEvent(this)">Contact this Pro</button>
-            <section>
+            }" onClick="contactDealerEvent(this)"><img src="./assets/images/email-icon.png" />Contact this Pro</button>
+            <section class="hours-section">
                 <h1>Business Hours</h1>
                 <p>Weekdays ${dealer.data.weekHours.mon}</p>
                 <p>Saturdays ${dealer.data.weekHours.sat}</p>
                 <p>Sundays ${dealer.data.weekHours.sun}</p>
             </section>
-            <section>
+            <section class="certs-section">
                ${certifications(dealer.data.certifications)}
             </section>
         </section>
