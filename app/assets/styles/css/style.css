@@ -140,6 +140,7 @@ article#dealers-container section {
 }
 
 article#dealers-container section div {
+  background-color: white;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -187,6 +188,7 @@ article#dealers-container section div section section.hours-section {
 }
 
 article#dealers-container section div section section.certs-section {
+  background-color: rgba(230, 230, 230, 0.5);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% auto;
@@ -274,6 +276,10 @@ section.info-container a {
   padding: 0.8em;
 }
 
+section.info-container a:nth-of-type(1) {
+  border-right: 1px solid #fff;
+}
+
 section.info-container img {
   height: 1em;
   width: 1em;
@@ -292,6 +298,10 @@ footer p {
   display: inline;
   font-size: 0.7em;
   padding: 1em;
+}
+
+footer p:not(:last-child) {
+  border-right: 1px solid #fff;
 }
 
 footer a {

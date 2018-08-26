@@ -2,7 +2,8 @@ $colors: (
   primary: #005dff,
   primary-light: lighten(#005dff, 40%),
   primary-dark: darken(#005dff, 40%),
-  accent: #fff6bb
+  accent: rgba(230, 230, 230, 0.5),
+  bg-light: rgba(230, 230, 230, 0.3)
 );
 
 @function color($color-name) {
@@ -16,7 +17,7 @@ html {
 }
 
 main {
-  background-color: rgba(230, 230, 230, 0.3);
+  background-color: color(bg-light);
 }
 
 header.navigation {
@@ -146,7 +147,9 @@ article#dealers-container {
   section {
     margin: 0 auto;
     max-width: 97vw;
+
     div {
+      background-color: white;
       align-self: center;
       box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 
@@ -192,6 +195,7 @@ article#dealers-container {
         }
 
         section.certs-section {
+          background-color: color(accent);
           display: grid;
           grid-template-columns: 50% auto;
 
@@ -263,6 +267,10 @@ section.info-container {
     padding: 0.8em;
   }
 
+  a:nth-of-type(1) {
+    border-right: 1px solid #fff;
+  }
+
   img {
     height: 1em;
     width: 1em;
@@ -281,6 +289,10 @@ footer {
     display: inline;
     font-size: 0.7em;
     padding: 1em;
+  }
+
+  p:not(:last-child) {
+    border-right: 1px solid #fff;
   }
 
   a {
