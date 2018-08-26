@@ -56,10 +56,10 @@ function checkboxValue(data) {
 
 function renderData(data) {
   let dealerContainer = document.getElementById("dealers-container");
-  let dealerList = `<ul>`;
+  let dealerList = `<section>`;
   data.map(dealer => {
     dealerList += `
-    <li>
+    <div>
         <h1>${dealer.data.name}</h1>
         <section>
             <a href="#"><img src="./assets/images/phone-icon-mobile.png" /><span>Tap to Call</span>${
@@ -79,9 +79,9 @@ function renderData(data) {
                ${certifications(dealer.data.certifications)}
             </section>
         </section>
-    </li>`;
+    </div>`;
   });
-  dealerList += `</ul>`;
+  dealerList += `</section>`;
   dealerContainer.innerHTML = dealerList;
 }
 

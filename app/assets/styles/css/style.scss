@@ -15,11 +15,16 @@ html {
   margin: 0;
 }
 
+.container {
+  //   max-width: 96vw;
+}
+
 header.navigation {
   width: 100%;
 }
 
-img.main-banner {
+.main-banner {
+  width: 100%;
   overflow: hidden;
 }
 
@@ -78,7 +83,7 @@ nav {
   .menu-icon {
     float: right;
     position: relative;
-    right: 1em;
+    right: 0.5em;
     width: 4.7em;
   }
 }
@@ -124,13 +129,14 @@ section.filter-section {
   }
 }
 
-section#dealers-container {
+article#dealers-container {
   text-align: center;
 
-  ul {
-    list-style-type: none;
-
-    li {
+  section {
+    margin: 0 auto;
+    max-width: 97vw;
+    div {
+      align-self: center;
       box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 
       h1 {

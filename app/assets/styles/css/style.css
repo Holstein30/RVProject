@@ -8,7 +8,8 @@ header.navigation {
   width: 100%;
 }
 
-img.main-banner {
+.main-banner {
+  width: 100%;
   overflow: hidden;
 }
 
@@ -69,7 +70,7 @@ nav a img {
 nav .menu-icon {
   float: right;
   position: relative;
-  right: 1em;
+  right: 0.5em;
   width: 4.7em;
 }
 
@@ -112,24 +113,28 @@ section.filter-section ul li span img {
   vertical-align: bottom;
 }
 
-section#dealers-container {
+article#dealers-container {
   text-align: center;
 }
 
-section#dealers-container ul {
-  list-style-type: none;
+article#dealers-container section {
+  margin: 0 auto;
+  max-width: 97vw;
 }
 
-section#dealers-container ul li {
+article#dealers-container section div {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -webkit-box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-section#dealers-container ul li h1 {
+article#dealers-container section div h1 {
   padding-top: 1em;
 }
 
-section#dealers-container ul li section a {
+article#dealers-container section div section a {
   background-color: #005dff;
   border-radius: 5px;
   color: white;
@@ -137,14 +142,14 @@ section#dealers-container ul li section a {
   text-decoration: none;
 }
 
-section#dealers-container ul li section a img {
+article#dealers-container section div section a img {
   height: 1.7em;
   width: 1.7em;
   padding-right: 1em;
   vertical-align: middle;
 }
 
-section#dealers-container ul li section button {
+article#dealers-container section div section button {
   border: 1px solid #ccdfff;
   background-color: #fff;
   border-radius: 5px;
@@ -153,18 +158,18 @@ section#dealers-container ul li section button {
   text-decoration: none;
 }
 
-section#dealers-container ul li section button img {
+article#dealers-container section div section button img {
   height: 1.2em;
   width: 1.5em;
   padding-right: 1em;
   vertical-align: middle;
 }
 
-section#dealers-container ul li section section.hours-section {
+article#dealers-container section div section section.hours-section {
   margin-bottom: 3em;
 }
 
-section#dealers-container ul li section section.certs-section {
+article#dealers-container section div section section.certs-section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% auto;
@@ -172,25 +177,25 @@ section#dealers-container ul li section section.certs-section {
       grid-template-areas: "primary secondary" "third fourth";
 }
 
-section#dealers-container ul li section section.certs-section p:nth-of-type(1) {
+article#dealers-container section div section section.certs-section p:nth-of-type(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: primary;
 }
 
-section#dealers-container ul li section section.certs-section p:nth-of-type(2) {
+article#dealers-container section div section section.certs-section p:nth-of-type(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondary;
 }
 
-section#dealers-container ul li section section.certs-section p:nth-of-type(3) {
+article#dealers-container section div section section.certs-section p:nth-of-type(3) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: third;
 }
 
-section#dealers-container ul li section section.certs-section p:nth-of-type(4) {
+article#dealers-container section div section section.certs-section p:nth-of-type(4) {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: fourth;
