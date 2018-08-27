@@ -259,13 +259,33 @@ article#dealers-container {
     margin: 0 auto;
     max-width: 97vw;
 
+    @include desktop {
+      max-width: 91vw;
+    }
+
     div {
       background-color: white;
       align-self: center;
       box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+      position: relative;
+
+      @include desktop {
+        width: 32%;
+        float: left;
+        margin: 0.6%;
+        border-radius: 5px;
+        height: 650px;
+      }
 
       h1 {
         padding-top: 1em;
+
+        @include desktop {
+          border-bottom: 1px solid color(accent-dark);
+          width: 90%;
+          margin: 0 auto 1em auto;
+          padding-bottom: 1em;
+        }
       }
 
       section {
@@ -276,9 +296,19 @@ article#dealers-container {
           padding: 0.5em;
           text-decoration: none;
 
-          //   span {
-          //     // resize font
-          //   }
+          @include desktop {
+            background-color: #fff;
+            color: #000;
+            font-size: 1.5em;
+            font-weight: 900;
+          }
+
+          span {
+            @include desktop {
+              display: none;
+            }
+          }
+
           img {
             height: 1.7em;
             width: 1.7em;
@@ -293,6 +323,11 @@ article#dealers-container {
           color: color(primary-dark);
           padding: 1em;
           text-decoration: none;
+
+          @include desktop {
+            border: 2px solid color(submit);
+            border-radius: 2px;
+          }
 
           img {
             height: 1.2em;
@@ -309,6 +344,14 @@ article#dealers-container {
           background-color: color(accent);
           display: grid;
           grid-template-columns: 50% auto;
+
+          @include desktop {
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            height: 136px;
+          }
 
           grid-template-areas:
             "primary secondary"
@@ -336,6 +379,10 @@ section.connect-container {
   background-color: color(primary-dark);
   color: #fff;
   text-align: center;
+
+  @include desktop {
+    clear: both;
+  }
 
   img {
     height: 2em;

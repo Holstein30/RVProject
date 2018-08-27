@@ -70,7 +70,7 @@ function renderData(data) {
               dealer.data.name
             }" onClick="contactDealerEvent(this)"><img src="./assets/images/email-icon.png" />Contact this Pro</button>
             <section class="hours-section">
-                <h1>Business Hours</h1>
+                <h3>Business Hours</h3>
                 <p>Weekdays ${dealer.data.weekHours.mon}</p>
                 <p>Saturdays ${dealer.data.weekHours.sat}</p>
                 <p>Sundays ${dealer.data.weekHours.sun}</p>
