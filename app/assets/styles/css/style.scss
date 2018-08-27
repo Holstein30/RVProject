@@ -410,7 +410,7 @@ section.connect-container {
       grid-template-columns: 5% auto;
       grid-template-areas: "a a a a a a a a
       primary secondary 
-      b b b b b b b b ";
+      b b b b b b b b";
     }
 
     h1 {
@@ -510,11 +510,21 @@ article.modal {
   background-color: color(bg-dark);
   text-align: justify;
 
+  @include desktop {
+    width: 50%;
+    left: 20em;
+  }
+
   header {
     background-color: color(primary-dark);
     color: #fff;
     padding: 2em 1em;
     margin: 0;
+
+    @include desktop {
+      height: 75px;
+      padding-top: 0.7em;
+    }
   }
 
   img {
@@ -531,6 +541,13 @@ article.modal {
 
     section {
       padding: 1em;
+
+      form {
+        @include desktop {
+          background-color: color(accent);
+          padding: 1em;
+        }
+      }
 
       p {
         span.modal-circle {
@@ -557,29 +574,87 @@ article.modal {
       text-align: justify;
       margin-left: 0.1em;
 
+      @include desktop {
+        background-color: inherit;
+        border-bottom: 1px solid color(accent-dark);
+        width: 100%;
+        padding-bottom: 1em;
+      }
+
+      input:nth-of-type(1),
       label:nth-of-type(1) {
         grid-area: primary;
+        margin-top: 1em;
       }
 
+      input:nth-of-type(2),
       label:nth-of-type(2) {
         grid-area: secondary;
+        margin-top: 1em;
       }
 
-      input {
-        position: relative;
-        top: 1.2em;
+      @include desktop {
+        grid-template-columns: 20% auto;
+
+        label {
+          border: 1px solid #000;
+          border-radius: 2px;
+          padding: 0.5em;
+          width: 3em;
+        }
+
+        label:hover {
+          background-color: color(bg-dark);
+        }
+
+        label:active {
+          background-color: color(submit);
+          color: #fff;
+        }
+
+        input {
+          opacity: 0;
+        }
       }
     }
-
-    #modal-submit {
+    div.submit-div {
       border: none;
-      background-color: #fff;
-      text-align: right;
-      color: color(submit);
-    }
 
+      @include desktop {
+        text-align: center;
+        font-weight: 900;
+      }
+
+      #modal-submit {
+        border: none;
+        background-color: #fff;
+        text-align: right;
+        color: color(submit);
+
+        @include desktop {
+          text-align: center;
+          color: #000;
+          font-weight: 900;
+        }
+      }
+
+      span.submit-text,
+      img {
+        display: none;
+
+        @include desktop {
+          display: inline-block;
+        }
+      }
+    }
     footer {
       display: none;
+
+      @include desktop {
+        display: inline-block;
+        background-color: color(bg-light);
+        color: #000;
+      }
     }
   }
 }

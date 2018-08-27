@@ -454,7 +454,7 @@ section.connect-container div {
   section.connect-container div {
     -ms-grid-columns: 5% auto;
         grid-template-columns: 5% auto;
-        grid-template-areas: "a a a a a a a a primary secondary  b b b b b b b b ";
+        grid-template-areas: "a a a a a a a a primary secondary  b b b b b b b b";
   }
 }
 
@@ -572,11 +572,25 @@ article.modal {
   text-align: justify;
 }
 
+@media (min-width: 900px) {
+  article.modal {
+    width: 50%;
+    left: 20em;
+  }
+}
+
 article.modal header {
   background-color: #001333;
   color: #fff;
   padding: 2em 1em;
   margin: 0;
+}
+
+@media (min-width: 900px) {
+  article.modal header {
+    height: 75px;
+    padding-top: 0.7em;
+  }
 }
 
 article.modal img {
@@ -594,6 +608,13 @@ article.modal div {
 
 article.modal div section {
   padding: 1em;
+}
+
+@media (min-width: 900px) {
+  article.modal div section form {
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 1em;
+  }
 }
 
 article.modal div section p span.modal-circle {
@@ -621,31 +642,101 @@ article.modal div div.modal-radios {
   margin-left: 0.1em;
 }
 
+@media (min-width: 900px) {
+  article.modal div div.modal-radios {
+    background-color: inherit;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+    width: 100%;
+    padding-bottom: 1em;
+  }
+}
+
+article.modal div div.modal-radios input:nth-of-type(1),
 article.modal div div.modal-radios label:nth-of-type(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: primary;
+  margin-top: 1em;
 }
 
+article.modal div div.modal-radios input:nth-of-type(2),
 article.modal div div.modal-radios label:nth-of-type(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondary;
+  margin-top: 1em;
 }
 
-article.modal div div.modal-radios input {
-  position: relative;
-  top: 1.2em;
+@media (min-width: 900px) {
+  article.modal div div.modal-radios {
+    -ms-grid-columns: 20% auto;
+        grid-template-columns: 20% auto;
+  }
+  article.modal div div.modal-radios label {
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 0.5em;
+    width: 3em;
+  }
+  article.modal div div.modal-radios label:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  article.modal div div.modal-radios label:active {
+    background-color: #00ffaa;
+    color: #fff;
+  }
+  article.modal div div.modal-radios input {
+    opacity: 0;
+  }
 }
 
-article.modal div #modal-submit {
+article.modal div div.submit-div {
+  border: none;
+}
+
+@media (min-width: 900px) {
+  article.modal div div.submit-div {
+    text-align: center;
+    font-weight: 900;
+  }
+}
+
+article.modal div div.submit-div #modal-submit {
   border: none;
   background-color: #fff;
   text-align: right;
   color: #00ffaa;
 }
 
+@media (min-width: 900px) {
+  article.modal div div.submit-div #modal-submit {
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+  }
+}
+
+article.modal div div.submit-div span.submit-text,
+article.modal div div.submit-div img {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  article.modal div div.submit-div span.submit-text,
+  article.modal div div.submit-div img {
+    display: inline-block;
+  }
+}
+
 article.modal div footer {
   display: none;
+}
+
+@media (min-width: 900px) {
+  article.modal div footer {
+    display: inline-block;
+    background-color: rgba(230, 230, 230, 0.3);
+    color: #000;
+  }
 }
 /*# sourceMappingURL=style.css.map */

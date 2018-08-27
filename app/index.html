@@ -133,13 +133,19 @@
           </p>
           <input type="email" name="email" data-inputs="modal-input" required />
           <p>Comments or questions<span>Optional</span></p>
-          <textarea name="comments" id="modal-comments" cols="20" rows="5" data-inputs="modal-input"></textarea>
+          <textarea name="comments" id="modal-comments" cols="20" rows="3" data-inputs="modal-input"></textarea>
           <p class="p-radio">Do you currently own a pool or spa? </p>
           <div class="modal-radios">
-            <label for="yes"><input type="radio" name="modal-radio" value="yes" />Yes</label>
-            <label for="no"><input type="radio" name="modal-radio" value="no" />No</label>
+            <input type="radio" name="modal-radio" value="yes" />
+            <label for="yes">Yes</label>
+            <input type="radio" name="modal-radio" value="no" />
+            <label for="no">No</label>
           </div>
-          <p><input type="submit" value="Send" id="modal-submit" /> </p>
+          <div class="submit-div">
+            <input type="submit" value="Send" id="modal-submit" />
+            <span class="submit-text">my email</span>
+            <img src="./assets/images/next-arrow.png" />
+          </div>
         </form>
       </section>
       <footer>
