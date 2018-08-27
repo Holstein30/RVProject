@@ -35,6 +35,13 @@ header.navigation {
   overflow: hidden;
 }
 
+@media (min-width: 900px) {
+  .main-banner {
+    min-width: 100%;
+    padding-top: 1em;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -401,12 +408,14 @@ article#dealers-container section div section section.certs-section p:nth-of-typ
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: primary;
+  padding-top: 1em;
 }
 
 article#dealers-container section div section section.certs-section p:nth-of-type(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondary;
+  padding-top: 1em;
 }
 
 article#dealers-container section div section section.certs-section p:nth-of-type(3) {
