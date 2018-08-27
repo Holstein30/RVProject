@@ -553,21 +553,14 @@ footer a {
 }
 
 article.modal {
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: -5em;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4);
   text-align: justify;
 }
@@ -737,6 +730,7 @@ article.modal div footer {
     display: inline-block;
     background-color: rgba(230, 230, 230, 0.3);
     color: #000;
+    padding-bottom: 2em;
   }
 }
 /*# sourceMappingURL=style.css.map */
