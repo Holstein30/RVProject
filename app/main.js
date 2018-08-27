@@ -13,6 +13,8 @@ function fetchData() {
   fetch("./dealers.json").then(res => {
     res.json().then(data => {
       //update the rendered cards with the correct dealers based on the filter
+      let dealersZip = document.getElementById("dealers-zip");
+      dealersZip.innerHTML = data.zipcode;
       checkboxValue(data);
     });
   });
@@ -21,9 +23,14 @@ function fetchData() {
 function filterData(values, data) {
   let filter = data.dealers.map(dealer => {
     let certData = dealer.data.certifications;
-    if (values.length !== certData.length) return false;
+    // if (values.length !== certData.length) return false;
     let valuesSorted = values.sort();
     let certDataSorted = certData.sort();
+    if (values.length < certData.length) {
+      if (values.some(x => certData.includes(x))) {
+        return true;
+      }
+    }
     for (var i = values.length; i--; ) {
       if (valuesSorted[i] !== certDataSorted[i]) return false;
     }
@@ -55,6 +62,9 @@ function checkboxValue(data) {
 }
 
 function renderData(data) {
+  console.log(data);
+  let numDealers = document.getElementById("num-dealers");
+  numDealers.innerHTML = data.length;
   let dealerContainer = document.getElementById("dealers-container");
   let dealerList = `<section>`;
   data.map(dealer => {
