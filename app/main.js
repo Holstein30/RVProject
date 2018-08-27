@@ -86,10 +86,10 @@ function renderData(data) {
 }
 
 function certifications(data) {
-  let returnCerts = data.map(certs => {
-    return `<p>${certs}</p>`;
+  let returnCerts = data.map(cert => {
+    return `<p>${cert}</p>`;
   });
-  return returnCerts;
+  return returnCerts.join("");
 }
 
 function contactDealerEvent(selectedPro) {
