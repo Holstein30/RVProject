@@ -27,6 +27,16 @@ html {
   margin: 0;
 }
 
+.top {
+  display: none;
+  height: 50px;
+  width: 100%;
+
+  @include desktop {
+    display: block;
+  }
+}
+
 main {
   background-color: color(bg-light);
   @include desktop {
@@ -284,7 +294,7 @@ article#dealers-container {
           border-bottom: 1px solid color(accent-dark);
           width: 90%;
           margin: 0 auto 1em auto;
-          padding-bottom: 1em;
+          height: 80px;
         }
       }
 
@@ -396,6 +406,13 @@ section.connect-container {
     grid-template-areas: "primary secondary";
     align-items: center;
 
+    @include desktop {
+      grid-template-columns: 5% auto;
+      grid-template-areas: "a a a a a a a a
+      primary secondary 
+      b b b b b b b b ";
+    }
+
     h1 {
       grid-area: primary;
       font-size: 1em;
@@ -405,6 +422,7 @@ section.connect-container {
       display: inline-block;
       grid-area: secondary;
       line-height: 67px;
+
       img {
         width: 1em;
         height: 1em;
@@ -419,14 +437,34 @@ section.info-container {
   text-align: center;
   padding: 1em;
 
+  @include desktop {
+    background-color: color(primary-dark);
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: right;
+  }
+
   a {
     text-decoration: none;
     color: #fff;
     padding: 0.8em;
+
+    @include desktop {
+      padding-right: 4em;
+    }
   }
 
   a:nth-of-type(1) {
     border-right: 1px solid #fff;
+
+    @include desktop {
+      border: none;
+      padding-right: 2em;
+    }
   }
 
   img {
