@@ -208,7 +208,7 @@ section.filter-section {
       border-left: 1px solid color(accent);
       padding: 0;
       padding-left: 1em;
-      background-color: inherit;
+      background-color: #f7f7f7;
       font-size: 1.5em;
     }
   }
@@ -226,7 +226,7 @@ section.filter-section {
       position: relative;
       right: 3em;
       bottom: 1.2em;
-      background-color: inherit;
+      background-color: #f7f7f7;
       padding: 0;
       margin: 0;
     }
@@ -557,7 +557,8 @@ article.modal {
       }
 
       p {
-        span.modal-circle {
+        span.modal-circle,
+        span.modal-optional {
           float: right;
         }
       }
@@ -582,7 +583,7 @@ article.modal {
       margin-left: 0.1em;
 
       @include desktop {
-        background-color: inherit;
+        background-color: #f2f2f2;
         border-bottom: 1px solid color(accent-dark);
         width: 100%;
         padding-bottom: 1em;
@@ -630,6 +631,7 @@ article.modal {
       @include desktop {
         text-align: center;
         font-weight: 900;
+        white-space: nowrap;
       }
 
       #modal-submit {
@@ -642,6 +644,8 @@ article.modal {
           text-align: center;
           color: #000;
           font-weight: 900;
+          padding: 2em;
+          background-color: color(accent);
         }
       }
 
@@ -650,7 +654,8 @@ article.modal {
         display: none;
 
         @include desktop {
-          display: inline-block;
+          display: inline;
+          text-align: left;
         }
       }
     }

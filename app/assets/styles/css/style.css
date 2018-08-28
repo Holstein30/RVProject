@@ -217,7 +217,7 @@ section.filter-section h1:nth-of-type(2) {
     border-left: 1px solid rgba(230, 230, 230, 0.5);
     padding: 0;
     padding-left: 1em;
-    background-color: inherit;
+    background-color: #f7f7f7;
     font-size: 1.5em;
   }
 }
@@ -237,7 +237,7 @@ section.filter-section ul {
     position: relative;
     right: 3em;
     bottom: 1.2em;
-    background-color: inherit;
+    background-color: #f7f7f7;
     padding: 0;
     margin: 0;
   }
@@ -621,7 +621,8 @@ article.modal div section {
   }
 }
 
-article.modal div section p span.modal-circle {
+article.modal div section p span.modal-circle,
+article.modal div section p span.modal-optional {
   float: right;
 }
 
@@ -648,7 +649,7 @@ article.modal div div.modal-radios {
 
 @media (min-width: 900px) {
   article.modal div div.modal-radios {
-    background-color: inherit;
+    background-color: #f2f2f2;
     border-bottom: 1px solid rgba(150, 150, 150, 0.5);
     width: 100%;
     padding-bottom: 1em;
@@ -702,6 +703,7 @@ article.modal div div.submit-div {
   article.modal div div.submit-div {
     text-align: center;
     font-weight: 900;
+    white-space: nowrap;
   }
 }
 
@@ -717,6 +719,8 @@ article.modal div div.submit-div #modal-submit {
     text-align: center;
     color: #000;
     font-weight: 900;
+    padding: 2em;
+    background-color: rgba(230, 230, 230, 0.5);
   }
 }
 
@@ -728,7 +732,8 @@ article.modal div div.submit-div img {
 @media (min-width: 900px) {
   article.modal div div.submit-div span.submit-text,
   article.modal div div.submit-div img {
-    display: inline-block;
+    display: inline;
+    text-align: left;
   }
 }
 

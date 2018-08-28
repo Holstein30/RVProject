@@ -100,15 +100,13 @@ function contactDealerEvent(selectedPro) {
     .forEach(el => (el.innerHTML = proName));
 }
 
-const modalSubmit = document.getElementById("modal-submit");
-
-modalSubmit.addEventListener("click", e => {
+document.getElementById("modal-submit").addEventListener("click", e => {
   e.preventDefault();
   document
     .querySelectorAll('input[data-inputs="modal-input"')
     .forEach(input => (input.value = ""));
   document.querySelector("textarea").value = "";
-  modalVar.classList.add("hidden");
+  document.querySelector(".modal").classList.add("hidden");
 });
 
 fetchData();
