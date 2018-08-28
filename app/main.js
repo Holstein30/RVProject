@@ -1,14 +1,5 @@
 // Main JS Functionality
 
-// !Event Handlers
-
-// Navigation Events
-// Filter Events
-// Dealer Section Events
-// Connect Events
-// Footer Events
-
-// !Conditional List Rendering
 function fetchData() {
   fetch("./dealers.json").then(res => {
     res.json().then(data => {
@@ -62,7 +53,6 @@ function checkboxValue(data) {
 }
 
 function renderData(data) {
-  console.log(data);
   let numDealers = document.getElementById("num-dealers");
   numDealers.innerHTML = data.length;
   let dealerContainer = document.getElementById("dealers-container");
@@ -110,16 +100,15 @@ function contactDealerEvent(selectedPro) {
     .forEach(el => (el.innerHTML = proName));
 }
 
-document.getElementById("modal-submit").addEventListener("click", e => {
+const modalSubmit = document.getElementById("modal-submit");
+
+modalSubmit.addEventListener("click", e => {
   e.preventDefault();
   document
     .querySelectorAll('input[data-inputs="modal-input"')
     .forEach(input => (input.value = ""));
   document.querySelector("textarea").value = "";
-  // document.querySelector(".modal").classList.add("hidden");
+  modalVar.classList.add("hidden");
 });
 
 fetchData();
-// Build HTML Elements
-// Render All
-// Filter Results
