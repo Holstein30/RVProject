@@ -447,6 +447,7 @@ section.info-container {
 
   @include desktop {
     background-color: color(primary-dark);
+    max-width: 97.5%;
   }
 
   @include desktop {

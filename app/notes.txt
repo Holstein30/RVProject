@@ -1,0 +1,16 @@
+! TODO !
+
+* Priority
+** Fix Responsiveness between 900px - ~1200px
+** Form Validation
+** Add comments EVERYWHERE
+** Add correct fonts & coloring
+** More crossbrowser testing & fixes
+** Performance testing
+
+* Secondary
+** Add missing icons
+** Refactor JS to be Object Oriented (plus more readable)
+** submit form information to local memory (or at least console)
+** Add links for all anchors/buttons
+** Final testing and bug fixes

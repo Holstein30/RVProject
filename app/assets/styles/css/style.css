@@ -499,6 +499,7 @@ section.info-container {
 @media (min-width: 900px) {
   section.info-container {
     background-color: #001333;
+    max-width: 97.5%;
   }
 }
 
