@@ -1,2 +1,5 @@
 # RVProject
-Project for Red Ventures
+
+Front End Developer Project for Red Ventures.
+
+Based of PSD mockups.

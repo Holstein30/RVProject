@@ -12,5 +12,15 @@
 ** Add missing icons
 ** Refactor JS to be Object Oriented (plus more readable)
 ** submit form information to local memory (or at least console)
-** Add links for all anchors/buttons
+** Add links, hover, active for all anchors/buttons
 ** Final testing and bug fixes
+
+*** Current Bugs ***
+* Responsiveness Between ~900px - ~1200px & Anything above ~1900px
+* Broken On Internet Explorer
+* Form Submit on Safari Not Working
+* Form Submitting even though required fields not entered 
+    (I know this has to do with my JS event running before any form validation)
+* Some edge cases of filter being inprecise
+* Business hours needs to say off when not working
+* And many more...
