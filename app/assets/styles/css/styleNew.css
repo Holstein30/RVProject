@@ -3,41 +3,90 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
 }
 
 /* ==== NAVIGATION ==== */
 .nav {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav--logo {
+  width: 12em;
 }
 
 .nav--toggle {
   display: none;
 }
 
-.nav nav {
+.nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
 }
 
-.nav nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.nav--links {
+  display: none;
 }
 
-.nav nav .nav--menu-icon,
-.nav nav .nav--menu-icon::before,
-.nav nav .nav--menu-icon::after {
-  display: block;
+.nav--btn-anchor {
+  border: 2px solid #005dff;
+  background-color: #fff;
+  border-radius: 2px;
+  color: #005dff;
+  padding: 0.6em;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.nav--btn-anchor:hover {
+  background-color: rgba(230, 230, 230, 0.5);
+}
+
+.nav--btn-anchor img {
+  width: 1em;
+  vertical-align: top;
+}
+
+.nav--menu-icon {
+  width: 4.5em;
+  position: relative;
+  top: 0.5em;
+}
+
+.nav--links {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: #005dff;
+  width: 100%;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.nav--toggle:checked ~ .nav--links {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.nav--toggle:checked ~ .nav--links {
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease-in-out 250ms;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 /*# sourceMappingURL=styleNew.css.map */
