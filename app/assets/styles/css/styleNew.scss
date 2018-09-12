@@ -1,0 +1,59 @@
+// Main Colors
+$colors: (
+  primary: #005dff,
+  primary-light: lighten(#005dff, 40%),
+  primary-dark: darken(#005dff, 40%),
+  accent: rgba(230, 230, 230, 0.5),
+  accent-dark: rgba(150, 150, 150, 0.5),
+  bg-light: rgba(230, 230, 230, 0.3),
+  bg-dark: rgba(0, 0, 0, 0.4),
+  submit: #00ffaa
+);
+
+// Media Query Sizes w/mixin for ease of use
+$desktop: 900px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Color function that loops through all colors and makes it easier to select them
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// Setting box-sizing to border-box
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ==== NAVIGATION ==== */
+
+.nav {
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  &--toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+    }
+
+    .nav--menu-icon,
+    .nav--menu-icon::before,
+    .nav--menu-icon::after {
+      display: block;
+    }
+  }
+}
