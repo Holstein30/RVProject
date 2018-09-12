@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Force IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>RV Pool Pro</title>
+  <link rel="stylesheet" href="./assets/styles/css/normalize.css">
+  <link rel="stylesheet" href="./assets/styles/css/style.css">
+</head>
+
+<body>
+  <div class="top"></div>
+  <!-- Header -->
+  <header class="navigation">
+    <!-- Navigation -->
+    <nav>
+      <!-- Logo -->
+      <img class="nav-logo" src="./assets/images/pool-pros-logo.png" alt="pool pros logo" />
+      <!-- Links -->
+      <aside>
+        <a href="#">Pools & Spas</a>
+        <a href="#">Supplies</a>
+        <a href="#">Resources</a>
+        <a href="#">Services</a>
+      </aside>
+      <!-- Find a Pro Button -->
+      <a class="nav-btn-anchor" href="#"><span class="nav-btn-icon"><img src="./assets/images/location-icon.png" alt="location icon"
+          /></span>Find a <span class="nav-btn-span">Pool</span> Pro</a>
+      <img class="menu-icon" src="./assets/images/menu-icon-mobile.png" alt="menu icon mobile">
+    </nav>
+  </header>
+
+  <!-- Water and Bubbles Banner -->
+  <div class="main-banner">
+    <img src="./assets/images/water-image.png" alt="water image banner" />
+  </div>
+
+  <main>
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <!-- Dealers in Zip -->
+      <h1><span id="num-dealers"></span> dealers in <span id="dealers-zip"></span></h1>
+      <!-- Filters -->
+      <h1>Filter Results</h1>
+      <ul class="checkboxes-container">
+        <li>
+          <input type="checkbox" value="Service Pro" name="filter-checkbox" onClick="fetchData()" />Service</li>
+        <li>
+          <input type="checkbox" value="Installation Pro" name="filter-checkbox" onClick="fetchData()" />Installation</li>
+        <li>
+          <input type="checkbox" value="Residential Pro" name="filter-checkbox" onClick="fetchData()" />Residential</li>
+        <li>
+          <input type="checkbox" value="Commercial Pro" name="filter-checkbox" onClick="fetchData()" />Commercial
+          <span class="tool-tip-icon"><img src="./assets/images/tool-tip-icon-filtering.png" alt="tool tip icon" /></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Dealers Container -->
+    <article id="dealers-container">
+      <!-- Self Contained Cards that Render based on Filters (JS to Create these) -->
+    </article>
+  </main>
+
+  <!-- Connect With Us Banner -->
+  <section class="connect-container">
+    <!-- Pool Pros Logo -->
+    <img src="./assets/images/pool-pros-logo-footer.png" alt="pool pros logo footer" />
+    <div>
+      <h1>Connect With Us</h1>
+      <!-- Social Icons -->
+      <div class="img-container">
+        <img src="./assets/images/twitter-icon.png" alt="twitter icon" />
+        <img src="./assets/images/facebook-icon.png" alt="facebook icon" />
+        <img src="./assets/images/youtube-icon.png" alt="youtube icon" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Dealers & Distributers Container -->
+  <section class="info-container">
+    <!-- Dealers and Distributors -->
+    <a href="#">Dealers and Distributors</a>
+    <a href="#">Customer Service
+      <span class="info-container-icon">
+        <img src="./assets/images/action-commercial-icon.png" alt="action commercial icon" />
+      </span>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Copyright, Privacy, Terms & Conditions -->
+    <p>&copy; 2017 Pool Pros</p>
+    <p>
+      <a href="#">Privacy Policy</a>
+    </p>
+    <p>
+      <a href="#">Terms and Conditions</a>
+    </p>
+  </footer>
+
+  <!-- Email Modal -->
+  <article class="modal hidden">
+    <div>
+      <header>
+        <p>Email</p>
+        <!-- Pro Name -->
+        <h1 class="modal-pro-name"></h1>
+      </header>
+      <section>
+        <p>Fill out the form below and <span class="modal-pro-name"></span> will get in touch.</p>
+        <form class="modal-form" action="#">
+          <p>First and last name
+            <span class="modal-circle">
+              <img src="./assets/images/circle-form.png" />
+            </span>
+          </p>
+          <input type="text" name="full-name" data-inputs="modal-input" required />
+          <p>Phone number
+            <span class="modal-circle">
+              <img src="./assets/images/circle-form.png" />
+            </span>
+          </p>
+          <input type="tel" name="phone" data-inputs="modal-input" required />
+          <p>Email address
+            <span class="modal-circle">
+              <img src="./assets/images/circle-form.png" />
+            </span>
+          </p>
+          <input type="email" name="email" data-inputs="modal-input" required />
+          <p>Comments or questions<span class="modal-optional">Optional</span></p>
+          <textarea name="comments" id="modal-comments" cols="20" rows="3" data-inputs="modal-input"></textarea>
+          <p class="p-radio">Do you currently own a pool or spa?<span class="modal-optional">Optional</span></p>
+          <div class="modal-radios">
+            <input type="radio" name="modal-radio" value="yes" />
+            <label for="yes">Yes</label>
+            <input type="radio" name="modal-radio" value="no" />
+            <label for="no">No</label>
+          </div>
+          <div class="submit-div">
+            <input type="submit" value="Send" id="modal-submit" />
+            <!-- <span class="submit-text">my email</span>
+            <img src="./assets/images/next-arrow.png" /> -->
+          </div>
+        </form>
+      </section>
+      <footer>
+        <p>"Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
+          Summus brains sit​​. Zombie ipsum reversus ab viral inferno, nam rick grimes malum.</p>
+      </footer>
+    </div>
+  </article>
+
+  <!-- JavaScript -->
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
