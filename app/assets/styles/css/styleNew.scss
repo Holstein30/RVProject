@@ -82,15 +82,31 @@ header {
     transform-origin: top;
     transition: transform 400ms ease-in-out;
 
+    @include desktop {
+      all: unset;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      grid-column: 2;
+
+      @include desktop {
+        display: flex;
+        justify-content: space-around;
+      }
 
       li {
         margin-bottom: 0.1em;
         padding: 1em;
         background-color: color(accent);
+
+        @include desktop {
+          background-color: #fff;
+        }
 
         a {
           color: #000;
@@ -99,8 +115,18 @@ header {
           opacity: 0;
           transition: opacity 150ms ease-in-out;
 
+          @include desktop {
+            opacity: 1;
+            color: color(primary);
+            font-weight: bold;
+          }
+
           &:hover {
             color: #fff;
+
+            @include desktop {
+              color: color(primary-dark);
+            }
           }
         }
       }
@@ -115,6 +141,7 @@ header {
     padding: 0.6em;
     text-decoration: none;
     font-size: 0.8em;
+    min-width: 9.5em;
 
     &:hover {
       background-color: color(accent);
@@ -139,6 +166,10 @@ header {
 
     @include phone-sm {
       max-width: 3.8em;
+    }
+
+    @include desktop {
+      display: none;
     }
   }
 

@@ -57,16 +57,44 @@ header nav {
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
+@media (min-width: 900px) {
+  header nav {
+    all: unset;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+  }
+}
+
 header nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+@media (min-width: 900px) {
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 header nav ul li {
   margin-bottom: 0.1em;
   padding: 1em;
   background-color: rgba(230, 230, 230, 0.5);
+}
+
+@media (min-width: 900px) {
+  header nav ul li {
+    background-color: #fff;
+  }
 }
 
 header nav ul li a {
@@ -78,8 +106,22 @@ header nav ul li a {
   transition: opacity 150ms ease-in-out;
 }
 
+@media (min-width: 900px) {
+  header nav ul li a {
+    opacity: 1;
+    color: #005dff;
+    font-weight: bold;
+  }
+}
+
 header nav ul li a:hover {
   color: #fff;
+}
+
+@media (min-width: 900px) {
+  header nav ul li a:hover {
+    color: #001333;
+  }
 }
 
 header .nav--btn-anchor {
@@ -90,6 +132,7 @@ header .nav--btn-anchor {
   padding: 0.6em;
   text-decoration: none;
   font-size: 0.8em;
+  min-width: 9.5em;
 }
 
 header .nav--btn-anchor:hover {
@@ -118,6 +161,14 @@ header .nav-toggle-label img::after {
   header .nav-toggle-label img::before,
   header .nav-toggle-label img::after {
     max-width: 3.8em;
+  }
+}
+
+@media (min-width: 900px) {
+  header .nav-toggle-label img,
+  header .nav-toggle-label img::before,
+  header .nav-toggle-label img::after {
+    display: none;
   }
 }
 
