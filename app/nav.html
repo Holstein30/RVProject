@@ -36,3 +36,84 @@
         </ul>
     </nav>
     </header>
+
+    <style>
+        .nav {
+            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+
+            &--logo {
+                width: 12em;
+            }
+
+            &--toggle {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+            }
+
+            &--links {
+                display: none;
+            }
+
+            &--btn-anchor {
+                border: 2px solid color(primary);
+                background-color: #fff;
+                border-radius: 2px;
+                color: color(primary);
+                padding: 0.6em;
+                text-decoration: none;
+                font-size: 0.8em;
+
+                &:hover {
+                    background-color: color(accent);
+                }
+
+                img {
+                    width: 1em;
+                    vertical-align: top;
+                }
+            }
+
+            &--menu-icon {
+                width: 4.5em;
+                position: relative;
+                top: 0.5em;
+            }
+
+            &--links {
+                position: absolute;
+                text-align: left;
+                top: 100%;
+                left: 0;
+                background: color(primary);
+                width: 100%;
+                transform: scale(1, 0);
+                transform-origin: top;
+                transition: transform 400ms ease-in-out;
+            }
+
+            &--toggle:checked~&--links {
+                transform: scale(1, 1);
+            }
+
+            &--toggle:checked~&--links {
+                opacity: 1;
+                transition: opacity 250ms ease-in-out 250ms;
+            }
+
+            // @include desktop {
+            //     display: flex;
+            //     color: white;
+            //     text-decoration: none;
+            //     font-size: 1.2rem;
+            //     text-transform: uppercase;
+            //     opacity: 0;
+            //     transition: opacity 150ms ease-in-out;
+            // }
+        }
+    </style>
