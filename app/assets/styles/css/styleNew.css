@@ -18,50 +18,13 @@ header {
   width: 100%;
 }
 
-.nav-toggle {
-  display: none;
+header .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: "";
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-  top: 7px;
-}
-
-nav {
+header nav {
   position: absolute;
   text-align: left;
   top: 100%;
@@ -78,18 +41,18 @@ nav {
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
-nav ul {
+header nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav li {
+header nav ul li {
   margin-bottom: 1em;
   margin-left: 1em;
 }
 
-nav a {
+header nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
@@ -99,16 +62,26 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
-nav a:hover {
-  color: #000;
+header nav ul li a:hover {
+  color: #001333;
 }
 
-.nav-toggle:checked ~ nav {
+header .nav-toggle {
+  display: none;
+}
+
+header .nav-toggle-label img,
+header .nav-toggle-label img::before,
+header .nav-toggle-label img::after {
+  width: 4em;
+}
+
+header .nav-toggle:checked ~ nav {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+header .nav-toggle:checked ~ nav a {
   opacity: 1;
   -webkit-transition: opacity 250ms ease-in-out 250ms;
   transition: opacity 250ms ease-in-out 250ms;

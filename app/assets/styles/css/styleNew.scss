@@ -44,88 +44,63 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
-}
 
-.nav-toggle {
-  display: none;
-}
+  .logo {
+    flex: 1;
+  }
 
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+  nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: color(primary);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: "";
-  position: absolute;
-}
+      li {
+        margin-bottom: 1em;
+        margin-left: 1em;
 
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          opacity: 0;
+          transition: opacity 150ms ease-in-out;
 
-.nav-toggle-label span::after {
-  top: 7px;
-}
+          &:hover {
+            color: color(primary-dark);
+          }
+        }
+      }
+    }
+  }
 
-nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: color(primary);
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-}
+  .nav-toggle {
+    display: none;
+  }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  .nav-toggle-label img,
+  .nav-toggle-label img::before,
+  .nav-toggle-label img::after {
+    width: 4em;
+  }
 
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
+  .nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+  }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-
-nav a:hover {
-  color: #000;
-}
-
-.nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
 }
