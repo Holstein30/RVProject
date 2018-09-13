@@ -12,9 +12,23 @@ $colors: (
 
 // Media Query Sizes w/mixin for ease of use
 $desktop: 900px;
+$phone-lg: 450px;
+$phone-sm: 340px;
 
 @mixin desktop {
   @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin phone-lg {
+  @media (min-width: #{$phone-lg}) {
+    @content;
+  }
+}
+
+@mixin phone-sm {
+  @media (max-width: #{$phone-sm}) {
     @content;
   }
 }
@@ -52,6 +66,10 @@ header {
     flex: 0.5;
     max-width: 20em;
     min-height: 1.5em;
+
+    @include phone-sm {
+      max-width: 8em;
+    }
   }
 
   nav {
@@ -115,7 +133,13 @@ header {
   .nav-toggle-label img,
   .nav-toggle-label img::before,
   .nav-toggle-label img::after {
-    width: 4em;
+    max-width: 4.5em;
+    position: relative;
+    top: 1em;
+
+    @include phone-sm {
+      max-width: 3.8em;
+    }
   }
 
   .nav-toggle:checked ~ nav {
@@ -125,5 +149,13 @@ header {
   .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
+  }
+
+  .nav--btn-span {
+    display: none;
+
+    @include phone-lg {
+      display: inline;
+    }
   }
 }

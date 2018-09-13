@@ -35,6 +35,12 @@ header .logo {
   min-height: 1.5em;
 }
 
+@media (max-width: 340px) {
+  header .logo {
+    max-width: 8em;
+  }
+}
+
 header nav {
   position: absolute;
   text-align: left;
@@ -102,7 +108,17 @@ header .nav-toggle {
 header .nav-toggle-label img,
 header .nav-toggle-label img::before,
 header .nav-toggle-label img::after {
-  width: 4em;
+  max-width: 4.5em;
+  position: relative;
+  top: 1em;
+}
+
+@media (max-width: 340px) {
+  header .nav-toggle-label img,
+  header .nav-toggle-label img::before,
+  header .nav-toggle-label img::after {
+    max-width: 3.8em;
+  }
 }
 
 header .nav-toggle:checked ~ nav {
@@ -114,5 +130,15 @@ header .nav-toggle:checked ~ nav a {
   opacity: 1;
   -webkit-transition: opacity 250ms ease-in-out 250ms;
   transition: opacity 250ms ease-in-out 250ms;
+}
+
+header .nav--btn-span {
+  display: none;
+}
+
+@media (min-width: 450px) {
+  header .nav--btn-span {
+    display: inline;
+  }
 }
 /*# sourceMappingURL=styleNew.css.map */
