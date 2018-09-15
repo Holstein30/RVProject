@@ -657,8 +657,8 @@ section.info-container a {
   text-decoration: none;
   color: #fff;
   padding: 0.8em;
-  -webkit-transition: color 2s ease-out;
-  transition: color 2s ease-out;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
 
 section.info-container a:hover {
@@ -718,8 +718,8 @@ footer p:not(:last-child) {
 footer a {
   text-decoration: none;
   color: #fff;
-  -webkit-transition: color 2s ease-out;
-  transition: color 2s ease-out;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
 
 footer a:hover {
