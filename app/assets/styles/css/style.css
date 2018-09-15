@@ -357,7 +357,6 @@ section.filter-section ul {
         -ms-flex: 1;
             flex: 1;
     border: none;
-    float: right;
     position: relative;
     right: 3em;
     bottom: 1.2em;
@@ -373,7 +372,14 @@ section.filter-section ul li {
 
 @media (min-width: 900px) {
   section.filter-section ul li {
-    float: left;
+    font-size: 1em;
+    position: relative;
+    top: 0.5em;
+  }
+}
+
+@media (min-width: 1080px) {
+  section.filter-section ul li {
     font-size: 1.3em;
     position: relative;
     top: 0.4em;
@@ -390,6 +396,10 @@ section.filter-section ul li input {
   width: 1.3em;
   height: 1.3em;
   vertical-align: bottom;
+}
+
+section.filter-section ul li input:hover {
+  cursor: pointer;
 }
 
 section.filter-section ul li span img {

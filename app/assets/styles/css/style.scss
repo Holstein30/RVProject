@@ -11,11 +11,18 @@ $colors: (
 
 // Media Query Sizes w/mixin for ease of use
 $desktop: 900px;
+$desktop2: 1080px;
 $phone-lg: 450px;
 $phone-sm: 340px;
 
 @mixin desktop {
   @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop2 {
+  @media (min-width: #{$desktop2}) {
     @content;
   }
 }
@@ -321,7 +328,6 @@ section.filter-section {
       align-self: flex-end;
       flex: 1;
       border: none;
-      float: right;
       position: relative;
       right: 3em;
       bottom: 1.2em;
@@ -334,7 +340,12 @@ section.filter-section {
       margin-bottom: 10px;
 
       @include desktop {
-        float: left;
+        font-size: 1em;
+        position: relative;
+        top: 0.5em;
+      }
+
+      @include desktop2 {
         font-size: 1.3em;
         position: relative;
         top: 0.4em;
@@ -350,6 +361,10 @@ section.filter-section {
         width: 1.3em;
         height: 1.3em;
         vertical-align: bottom;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       span img {
