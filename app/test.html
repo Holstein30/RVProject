@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RV Pool Pro</title>
+  <link rel="stylesheet" href="./assets/styles/css/normalize.css">
+  <link rel="stylesheet" href="./assets/styles/css/styleNew.css">
+</head>
+
+<body>
+
+  <header>
+    <img class="logo" src="./assets/images/pool-pros-logo.png" alt="pool pros company logo" />
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <nav>
+      <ul>
+        <li><a href="#">Pool & Spas</a></li>
+        <li><a href="#">Supplies</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </nav>
+    <!-- Navigation Call to Action -->
+    <a class="nav--btn-anchor" href="#">
+      <span class="nav--btn-icon">
+        <img src="./assets/images/location-icon.png" alt="location icon" />
+      </span>Find a
+      <span class="nav--btn-span">
+        Pool
+      </span> Pro
+    </a>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <img class="nav-toggle-label" src="./assets/images/menu-icon-mobile.png" alt="menu icon mobile" />
+    </label>
+  </header>
+
+  <!-- Document Container -->
+  <div class="container">
+
+    <div class="main-banner">
+      <img src="./assets/images/water-image.png" alt="water image banner" />
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <!-- Dealers in Zip -->
+        <h1><span id="num-dealers"></span> dealers in <span id="dealers-zip"></span></h1>
+        <!-- Filters -->
+        <h1>Filter Results</h1>
+        <ul class="checkboxes-container">
+          <li>
+            <input type="checkbox" value="Service Pro" name="filter-checkbox" onClick="fetchData()" />Service</li>
+          <li>
+            <input type="checkbox" value="Installation Pro" name="filter-checkbox" onClick="fetchData()" />Installation</li>
+          <li>
+            <input type="checkbox" value="Residential Pro" name="filter-checkbox" onClick="fetchData()" />Residential</li>
+          <li>
+            <input type="checkbox" value="Commercial Pro" name="filter-checkbox" onClick="fetchData()" />Commercial
+            <span class="tool-tip-icon"><img src="./assets/images/tool-tip-icon-filtering.png" alt="tool tip icon" /></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Dealers Container -->
+      <section id="dealers-container">
+        <!-- Self Contained Cards that Render based on Filters (JS to Create these) -->
+      </section>
+    </main>
+
+    <!-- Connect With Us Banner -->
+    <section class="connect-container">
+      <!-- Pool Pros Logo -->
+      <img src="./assets/images/pool-pros-logo-footer.png" alt="pool pros logo footer" />
+      <div>
+        <h1>Connect With Us</h1>
+        <!-- Social Icons -->
+        <ul class="img-container">
+          <li><img src="./assets/images/twitter-icon.png" alt="twitter icon" /></li>
+          <li><img src="./assets/images/facebook-icon.png" alt="facebook icon" /></li>
+          <li><img src="./assets/images/youtube-icon.png" alt="youtube icon" /></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Dealers & Distributers Container -->
+    <section class="info-container">
+      <!-- Dealers and Distributors -->
+      <a href="#">Dealers and Distributors</a>
+      <a href="#">Customer Service
+        <span class="info-container-icon">
+          <img src="./assets/images/action-commercial-icon.png" alt="action commercial icon" />
+        </span>
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Copyright, Privacy, Terms & Conditions -->
+      <p>&copy; 2017 Pool Pros</p>
+      <p>
+        <a href="#">Privacy Policy</a>
+      </p>
+      <p>
+        <a href="#">Terms and Conditions</a>
+      </p>
+    </footer>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
