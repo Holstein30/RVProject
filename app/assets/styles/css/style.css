@@ -140,6 +140,31 @@ header nav ul li a {
   transition: opacity 150ms ease-in-out;
 }
 
+header nav ul li a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: #005dff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+  width: 30%;
+}
+
+@media (min-width: 900px) {
+  header nav ul li a::before {
+    width: 100%;
+  }
+}
+
+header nav ul li a:hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
 @media (min-width: 900px) {
   header nav ul li a {
     opacity: 1;
@@ -167,10 +192,13 @@ header .nav--btn-anchor {
   text-decoration: none;
   font-size: 0.8em;
   min-width: 9.5em;
+  -webkit-transition: background-color 1s ease-in;
+  transition: background-color 1s ease-in;
 }
 
 header .nav--btn-anchor:hover {
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: #005dff;
+  color: #fff;
 }
 
 header .nav--btn-anchor img {
@@ -471,6 +499,12 @@ article#dealers-container section div section button {
   color: #001333;
   padding: 1em;
   text-decoration: none;
+  -webkit-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+article#dealers-container section div section button:hover {
+  background-color: #00ffaa;
 }
 
 @media (min-width: 900px) {
@@ -597,7 +631,6 @@ section.info-container {
 @media (min-width: 900px) {
   section.info-container {
     background-color: #001333;
-    max-width: 97.5%;
   }
 }
 
@@ -614,6 +647,18 @@ section.info-container a {
   text-decoration: none;
   color: #fff;
   padding: 0.8em;
+  -webkit-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+
+section.info-container a:hover {
+  color: #001333;
+}
+
+@media (min-width: 900px) {
+  section.info-container a:hover {
+    color: #00ffaa;
+  }
 }
 
 @media (min-width: 900px) {
@@ -663,6 +708,12 @@ footer p:not(:last-child) {
 footer a {
   text-decoration: none;
   color: #fff;
+  -webkit-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+
+footer a:hover {
+  color: #001333;
 }
 
 /* =========================== */

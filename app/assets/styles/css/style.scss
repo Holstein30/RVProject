@@ -142,6 +142,24 @@ header {
           opacity: 0;
           transition: opacity 150ms ease-in-out;
 
+          &::before {
+            content: "";
+            display: block;
+            height: 5px;
+            background: color(primary);
+            transform: scale(0, 1);
+            transition: transform ease-in-out 250ms;
+            width: 30%;
+
+            @include desktop {
+              width: 100%;
+            }
+          }
+
+          &:hover::before {
+            transform: scale(1, 1);
+          }
+
           @include desktop {
             opacity: 1;
             color: color(primary);
@@ -169,9 +187,11 @@ header {
     text-decoration: none;
     font-size: 0.8em;
     min-width: 9.5em;
+    transition: background-color 1s ease-in;
 
     &:hover {
-      background-color: color(accent);
+      background-color: color(primary);
+      color: #fff;
     }
 
     img {
@@ -427,6 +447,11 @@ article#dealers-container {
           color: color(primary-dark);
           padding: 1em;
           text-decoration: none;
+          transition: background-color 2s ease-out;
+
+          &:hover {
+            background-color: color(submit);
+          }
 
           @include desktop {
             border: 2px solid color(submit);
@@ -532,7 +557,6 @@ section.info-container {
 
   @include desktop {
     background-color: color(primary-dark);
-    max-width: 97.5%;
   }
 
   @include desktop {
@@ -546,6 +570,15 @@ section.info-container {
     text-decoration: none;
     color: #fff;
     padding: 0.8em;
+    transition: color 2s ease-out;
+
+    &:hover {
+      color: color(primary-dark);
+
+      @include desktop {
+        color: color(submit);
+      }
+    }
 
     @include desktop {
       padding-right: 4em;
@@ -594,6 +627,11 @@ footer {
   a {
     text-decoration: none;
     color: #fff;
+    transition: color 2s ease-out;
+
+    &:hover {
+      color: color(primary-dark);
+    }
   }
 }
 
