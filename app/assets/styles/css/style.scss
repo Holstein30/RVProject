@@ -664,6 +664,7 @@ footer {
 // }
 
 .modal {
+  z-index: 1010;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -733,12 +734,18 @@ footer {
         justify-content: space-between;
 
         &:nth-of-type(2) {
-          max-width: 40%;
+          max-width: 50%;
+          @include desktop {
+            max-width: 40%;
+          }
         }
       }
 
       input:nth-of-type(2) {
-        max-width: 40%;
+        max-width: 50%;
+        @include desktop {
+          max-width: 40%;
+        }
       }
 
       input,
@@ -754,9 +761,7 @@ footer {
     }
 
     div.modal-radios {
-      display: grid;
-      grid-template-columns: 25%;
-      grid-template-areas: "primary secondary third fourth";
+      display: flex;
       border: none;
       text-align: justify;
       margin-left: 0.1em;
@@ -770,23 +775,19 @@ footer {
 
       input:nth-of-type(1),
       label:nth-of-type(1) {
-        grid-area: primary;
         margin-top: 1em;
       }
 
       input:nth-of-type(2),
       label:nth-of-type(2) {
-        grid-area: secondary;
         margin-top: 1em;
       }
 
       @include desktop {
-        grid-template-columns: 20% auto;
-
         label {
           border: 1px solid #000;
           border-radius: 2px;
-          padding: 0.5em;
+          padding: 0.5em 1.5em;
           width: 3em;
         }
 
@@ -794,7 +795,7 @@ footer {
           background-color: color(bg-dark);
         }
 
-        label:active {
+        label:focus {
           background-color: color(submit);
           color: #fff;
         }
@@ -848,5 +849,15 @@ footer {
         padding-bottom: 2em;
       }
     }
+  }
+
+  &-overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color(bg-dark);
   }
 }

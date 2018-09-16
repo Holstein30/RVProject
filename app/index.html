@@ -143,10 +143,14 @@
           <textarea name="comments" id="modal-comments" cols="20" rows="3" data-inputs="modal-input"></textarea>
           <p class="p-radio">Do you currently own a pool or spa?<span class="modal-optional">Optional</span></p>
           <div class="modal-radios">
-            <input type="radio" name="modal-radio" value="yes" />
-            <label for="yes">Yes</label>
-            <input type="radio" name="modal-radio" value="no" />
-            <label for="no">No</label>
+            <span>
+              <input type="radio" name="modal-radio" value="yes" />
+              <label for="yes">Yes</label>
+            </span>
+            <span>
+              <input type="radio" name="modal-radio" value="no" />
+              <label for="no">No</label>
+            </span>
           </div>
           <div class="submit-div">
             <input type="submit" value="Send" id="modal-submit" />
@@ -162,6 +166,9 @@
       </footer>
     </div>
   </article>
+
+  <div class="modal-overlay hidden" id="modal-overlay">
+  </div>
 
   <!-- JavaScript -->
   <script src="./main.js"></script>

@@ -574,14 +574,14 @@ article#dealers-container section div section section.certs-section p:nth-of-typ
 }
 
 article#dealers-container section div section section.certs-section p:nth-of-type(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: third;
 }
 
 article#dealers-container section div section section.certs-section p:nth-of-type(4) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: fourth;
 }
 
@@ -730,6 +730,7 @@ footer a:hover {
 /* ==== Modal ==== */
 /* =========================== */
 .modal {
+  z-index: 1010;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -812,11 +813,23 @@ footer a:hover {
 }
 
 .modal-container section p:nth-of-type(2) {
-  max-width: 40%;
+  max-width: 50%;
+}
+
+@media (min-width: 900px) {
+  .modal-container section p:nth-of-type(2) {
+    max-width: 40%;
+  }
 }
 
 .modal-container section input:nth-of-type(2) {
-  max-width: 40%;
+  max-width: 50%;
+}
+
+@media (min-width: 900px) {
+  .modal-container section input:nth-of-type(2) {
+    max-width: 40%;
+  }
 }
 
 .modal-container section input,
@@ -831,11 +844,9 @@ footer a:hover {
 }
 
 .modal-container div.modal-radios {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 25%;
-      grid-template-columns: 25%;
-      grid-template-areas: "primary secondary third fourth";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border: none;
   text-align: justify;
   margin-left: 0.1em;
@@ -852,35 +863,25 @@ footer a:hover {
 
 .modal-container div.modal-radios input:nth-of-type(1),
 .modal-container div.modal-radios label:nth-of-type(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: primary;
   margin-top: 1em;
 }
 
 .modal-container div.modal-radios input:nth-of-type(2),
 .modal-container div.modal-radios label:nth-of-type(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: secondary;
   margin-top: 1em;
 }
 
 @media (min-width: 900px) {
-  .modal-container div.modal-radios {
-    -ms-grid-columns: 20% auto;
-        grid-template-columns: 20% auto;
-  }
   .modal-container div.modal-radios label {
     border: 1px solid #000;
     border-radius: 2px;
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
     width: 3em;
   }
   .modal-container div.modal-radios label:hover {
     background-color: rgba(0, 0, 0, 0.4);
   }
-  .modal-container div.modal-radios label:active {
+  .modal-container div.modal-radios label:focus {
     background-color: #00ffaa;
     color: #fff;
   }
@@ -942,5 +943,15 @@ footer a:hover {
     color: #000;
     padding-bottom: 2em;
   }
+}
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 /*# sourceMappingURL=style.css.map */
