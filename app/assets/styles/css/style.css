@@ -739,6 +739,8 @@ footer a:hover {
   width: 90%;
   max-height: 100%;
   text-align: justify;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @media (min-width: 900px) {
@@ -788,6 +790,7 @@ footer a:hover {
 }
 
 .modal-container section {
+  overflow: hidden;
   padding: 1em;
   margin-top: 5em;
 }
@@ -888,6 +891,7 @@ footer a:hover {
   }
   .modal-container div.modal-radios label:hover {
     background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
   }
   .modal-container div.modal-radios label:focus {
     background-color: #00ffaa;
@@ -932,15 +936,15 @@ footer a:hover {
   }
 }
 
-.modal-container div.submit-div p.submit-text,
+.modal-container div.submit-div span.submit-text,
 .modal-container div.submit-div img {
   display: none;
 }
 
 @media (min-width: 900px) {
-  .modal-container div.submit-div p.submit-text,
+  .modal-container div.submit-div span.submit-text,
   .modal-container div.submit-div img {
-    display: inline;
+    display: inline-block;
     position: relative;
     right: 390px;
   }

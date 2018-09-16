@@ -672,6 +672,8 @@ footer {
   width: 90%;
   max-height: 100%;
   text-align: justify;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   @include desktop {
     width: 800px;
@@ -715,6 +717,7 @@ footer {
     }
 
     section {
+      overflow: hidden;
       padding: 1em;
       margin-top: 5em;
 
@@ -797,6 +800,7 @@ footer {
 
         label:hover {
           background-color: color(bg-dark);
+          cursor: pointer;
         }
 
         label:focus {
@@ -838,12 +842,12 @@ footer {
         }
       }
 
-      p.submit-text,
+      span.submit-text,
       img {
         display: none;
 
         @include desktop {
-          display: inline;
+          display: inline-block;
           position: relative;
           right: 390px;
         }
