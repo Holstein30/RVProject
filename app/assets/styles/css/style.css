@@ -601,8 +601,8 @@ section.connect-container {
 }
 
 section.connect-container img {
+  max-width: 13em;
   height: 2em;
-  width: 13em;
   margin-top: 2em;
 }
 
@@ -623,10 +623,6 @@ section.connect-container .social-container .img-container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-section.connect-container .social-container .img-container img {
-  max-width: 3em;
 }
 
 /* =========================== */
@@ -752,7 +748,18 @@ footer a:hover {
 .modal-close {
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 20px;
+  top: 10px;
+  z-index: 1200;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+@media (min-width: 900px) {
+  .modal-close {
+    font-size: 1.5em;
+  }
 }
 
 .modal img {

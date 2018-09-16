@@ -540,9 +540,14 @@ section.connect-container {
   }
 
   img {
+    max-width: 13em;
     height: 2em;
-    width: 13em;
     margin-top: 2em;
+
+    // @include phone-lg {
+    //   height: 2em;
+    //   width: 13em;
+    // }
   }
 
   .social-container {
@@ -552,9 +557,6 @@ section.connect-container {
       display: flex;
       width: 30%;
       justify-content: space-evenly;
-      img {
-        max-width: 3em;
-      }
     }
   }
 }
@@ -656,13 +658,6 @@ footer {
 
 /* =========================== */
 
-// .modal {
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
 .modal {
   z-index: 1010;
   position: fixed;
@@ -682,7 +677,16 @@ footer {
   &-close {
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 20px;
+    top: 10px;
+    z-index: 1200;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 900;
+
+    @include desktop {
+      font-size: 1.5em;
+    }
   }
 
   img {

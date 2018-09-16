@@ -112,7 +112,7 @@
   <!-- Email Modal -->
   <article class="modal">
     <div class="modal-container">
-      <button class="modal-close">X</button>
+      <a class="modal-close" href="#" onClick="toggleModal()">X</a>
       <header class="modal-header">
         <p>Email</p>
         <!-- Pro Name -->
@@ -153,7 +153,7 @@
             </span>
           </div>
           <div class="submit-div">
-            <input type="submit" value="Send" id="modal-submit" />
+            <input type="submit" value="Send" id="modal-submit" onClick="toggleModal()" />
             <span class="submit-text">my email</span>
             <img src="./assets/images/next-arrow.png" />
           </div>

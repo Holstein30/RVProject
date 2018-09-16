@@ -100,13 +100,15 @@ function contactDealerEvent(selectedPro) {
     .forEach(el => (el.innerHTML = proName));
 }
 
-document.getElementById("modal-submit").addEventListener("click", e => {
-  e.preventDefault();
+function toggleModal(e) {
+  if (e) {
+    e.preventDefault();
+  }
   document
     .querySelectorAll('input[data-inputs="modal-input"')
     .forEach(input => (input.value = ""));
   document.querySelector("textarea").value = "";
   document.querySelector(".modal").classList.add("hidden");
-});
+}
 
 fetchData();
