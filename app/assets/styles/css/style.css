@@ -811,10 +811,19 @@ footer a:hover {
           justify-content: space-between;
 }
 
+.modal-container section p:nth-of-type(2) {
+  max-width: 40%;
+}
+
+.modal-container section input:nth-of-type(2) {
+  max-width: 40%;
+}
+
 .modal-container section input,
 .modal-container section textarea {
   border: 1px solid rgba(150, 150, 150, 0.5);
   width: 100%;
+  padding: 0.5em;
 }
 
 .modal-container p.p-radio {

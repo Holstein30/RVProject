@@ -731,12 +731,21 @@ footer {
       p {
         display: flex;
         justify-content: space-between;
+
+        &:nth-of-type(2) {
+          max-width: 40%;
+        }
+      }
+
+      input:nth-of-type(2) {
+        max-width: 40%;
       }
 
       input,
       textarea {
         border: 1px solid color(accent-dark);
         width: 100%;
+        padding: 0.5em;
       }
     }
 
