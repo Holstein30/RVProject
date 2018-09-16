@@ -789,6 +789,7 @@ footer {
           border-radius: 2px;
           padding: 0.5em 1.5em;
           width: 3em;
+          transition: background-color 1s ease-out;
         }
 
         label:hover {

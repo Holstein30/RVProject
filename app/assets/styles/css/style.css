@@ -877,6 +877,8 @@ footer a:hover {
     border-radius: 2px;
     padding: 0.5em 1.5em;
     width: 3em;
+    -webkit-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
   }
   .modal-container div.modal-radios label:hover {
     background-color: rgba(0, 0, 0, 0.4);
