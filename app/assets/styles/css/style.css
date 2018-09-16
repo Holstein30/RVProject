@@ -729,80 +729,87 @@ footer a:hover {
 /* =========================== */
 /* ==== Modal ==== */
 /* =========================== */
-article.modal {
+.modal {
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: -5em;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  max-height: 100%;
   text-align: justify;
 }
 
 @media (min-width: 900px) {
-  article.modal {
-    width: 50%;
-    left: 20em;
+  .modal {
+    width: 800px;
   }
 }
 
-article.modal header {
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+
+.modal img {
+  height: 1em;
+  width: 1em;
+}
+
+.modal-container {
+  overflow: auto;
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #888;
+}
+
+.modal-container .modal-header {
   background-color: #001333;
   color: #fff;
-  padding: 2em 1em;
   margin: 0;
+  top: 0;
 }
 
 @media (min-width: 900px) {
-  article.modal header {
+  .modal-container .modal-header {
     height: 75px;
     padding-top: 0.7em;
   }
 }
 
-article.modal img {
-  height: 1em;
-  width: 1em;
-}
-
-article.modal div {
-  background-color: #fefefe;
-  margin: 0 auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 93%;
-}
-
-article.modal div section {
+.modal-container section {
   padding: 1em;
 }
 
 @media (min-width: 900px) {
-  article.modal div section form {
+  .modal-container section form {
     background-color: rgba(230, 230, 230, 0.5);
     padding: 1em;
   }
 }
 
-article.modal div section p span.modal-circle,
-article.modal div section p span.modal-optional {
-  float: right;
+.modal-container section p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-article.modal div section input,
-article.modal div section textarea {
+.modal-container section input,
+.modal-container section textarea {
   border: 1px solid rgba(150, 150, 150, 0.5);
   width: 100%;
 }
 
-article.modal div p.p-radio {
+.modal-container p.p-radio {
   margin: 1em 0 0 0;
 }
 
-article.modal div div.modal-radios {
+.modal-container div.modal-radios {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 25%;
@@ -814,7 +821,7 @@ article.modal div div.modal-radios {
 }
 
 @media (min-width: 900px) {
-  article.modal div div.modal-radios {
+  .modal-container div.modal-radios {
     background-color: #f2f2f2;
     border-bottom: 1px solid rgba(150, 150, 150, 0.5);
     width: 100%;
@@ -822,16 +829,16 @@ article.modal div div.modal-radios {
   }
 }
 
-article.modal div div.modal-radios input:nth-of-type(1),
-article.modal div div.modal-radios label:nth-of-type(1) {
+.modal-container div.modal-radios input:nth-of-type(1),
+.modal-container div.modal-radios label:nth-of-type(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: primary;
   margin-top: 1em;
 }
 
-article.modal div div.modal-radios input:nth-of-type(2),
-article.modal div div.modal-radios label:nth-of-type(2) {
+.modal-container div.modal-radios input:nth-of-type(2),
+.modal-container div.modal-radios label:nth-of-type(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondary;
@@ -839,41 +846,41 @@ article.modal div div.modal-radios label:nth-of-type(2) {
 }
 
 @media (min-width: 900px) {
-  article.modal div div.modal-radios {
+  .modal-container div.modal-radios {
     -ms-grid-columns: 20% auto;
         grid-template-columns: 20% auto;
   }
-  article.modal div div.modal-radios label {
+  .modal-container div.modal-radios label {
     border: 1px solid #000;
     border-radius: 2px;
     padding: 0.5em;
     width: 3em;
   }
-  article.modal div div.modal-radios label:hover {
+  .modal-container div.modal-radios label:hover {
     background-color: rgba(0, 0, 0, 0.4);
   }
-  article.modal div div.modal-radios label:active {
+  .modal-container div.modal-radios label:active {
     background-color: #00ffaa;
     color: #fff;
   }
-  article.modal div div.modal-radios input {
+  .modal-container div.modal-radios input {
     opacity: 0;
   }
 }
 
-article.modal div div.submit-div {
+.modal-container div.submit-div {
   border: none;
 }
 
 @media (min-width: 900px) {
-  article.modal div div.submit-div {
+  .modal-container div.submit-div {
     text-align: center;
     font-weight: 900;
     white-space: nowrap;
   }
 }
 
-article.modal div div.submit-div #modal-submit {
+.modal-container div.submit-div #modal-submit {
   border: none;
   background-color: #fff;
   text-align: right;
@@ -881,7 +888,7 @@ article.modal div div.submit-div #modal-submit {
 }
 
 @media (min-width: 900px) {
-  article.modal div div.submit-div #modal-submit {
+  .modal-container div.submit-div #modal-submit {
     text-align: center;
     color: #000;
     font-weight: 900;
@@ -890,25 +897,25 @@ article.modal div div.submit-div #modal-submit {
   }
 }
 
-article.modal div div.submit-div span.submit-text,
-article.modal div div.submit-div img {
+.modal-container div.submit-div span.submit-text,
+.modal-container div.submit-div img {
   display: none;
 }
 
 @media (min-width: 900px) {
-  article.modal div div.submit-div span.submit-text,
-  article.modal div div.submit-div img {
+  .modal-container div.submit-div span.submit-text,
+  .modal-container div.submit-div img {
     display: inline;
     text-align: left;
   }
 }
 
-article.modal div footer {
+.modal-container footer {
   display: none;
 }
 
 @media (min-width: 900px) {
-  article.modal div footer {
+  .modal-container footer {
     display: inline-block;
     background-color: rgba(230, 230, 230, 0.3);
     color: #000;

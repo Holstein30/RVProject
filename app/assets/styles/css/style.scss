@@ -656,33 +656,30 @@ footer {
 
 /* =========================== */
 
-article.modal {
+// .modal {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+.modal {
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: -5em;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: color(bg-dark);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-height: 100%;
   text-align: justify;
 
   @include desktop {
-    width: 50%;
-    left: 20em;
+    width: 800px;
   }
 
-  header {
-    background-color: color(primary-dark);
-    color: #fff;
-    padding: 2em 1em;
-    margin: 0;
-
-    @include desktop {
-      height: 75px;
-      padding-top: 0.7em;
-    }
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 30px;
   }
 
   img {
@@ -690,12 +687,24 @@ article.modal {
     width: 1em;
   }
 
-  div {
+  &-container {
+    overflow: auto;
     background-color: #fefefe;
     margin: 0 auto;
     padding: 0;
     border: 1px solid #888;
-    width: 93%;
+
+    .modal-header {
+      background-color: color(primary-dark);
+      color: #fff;
+      margin: 0;
+      top: 0;
+
+      @include desktop {
+        height: 75px;
+        padding-top: 0.7em;
+      }
+    }
 
     section {
       padding: 1em;
@@ -708,10 +717,8 @@ article.modal {
       }
 
       p {
-        span.modal-circle,
-        span.modal-optional {
-          float: right;
-        }
+        display: flex;
+        justify-content: space-between;
       }
 
       input,
