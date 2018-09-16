@@ -824,22 +824,29 @@ footer {
         text-align: right;
         color: color(submit);
 
+        &:hover {
+          cursor: pointer;
+        }
+
         @include desktop {
           text-align: center;
           color: #000;
           font-weight: 900;
           padding: 2em;
           background-color: color(accent);
+          position: relative;
+          right: 40px;
         }
       }
 
-      span.submit-text,
+      p.submit-text,
       img {
         display: none;
 
         @include desktop {
           display: inline;
-          text-align: left;
+          position: relative;
+          right: 390px;
         }
       }
     }

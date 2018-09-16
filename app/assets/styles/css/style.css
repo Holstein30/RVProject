@@ -917,6 +917,10 @@ footer a:hover {
   color: #00ffaa;
 }
 
+.modal-container div.submit-div #modal-submit:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 900px) {
   .modal-container div.submit-div #modal-submit {
     text-align: center;
@@ -924,19 +928,22 @@ footer a:hover {
     font-weight: 900;
     padding: 2em;
     background-color: rgba(230, 230, 230, 0.5);
+    position: relative;
+    right: 40px;
   }
 }
 
-.modal-container div.submit-div span.submit-text,
+.modal-container div.submit-div p.submit-text,
 .modal-container div.submit-div img {
   display: none;
 }
 
 @media (min-width: 900px) {
-  .modal-container div.submit-div span.submit-text,
+  .modal-container div.submit-div p.submit-text,
   .modal-container div.submit-div img {
     display: inline;
-    text-align: left;
+    position: relative;
+    right: 390px;
   }
 }
 
