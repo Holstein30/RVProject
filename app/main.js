@@ -94,6 +94,7 @@ function certifications(data) {
 
 function contactDealerEvent(selectedPro) {
   document.querySelector(".modal").classList.remove("hidden");
+  document.getElementById("modal-overlay").classList.remove("hidden");
   let proName = selectedPro.value;
   document
     .querySelectorAll(".modal-pro-name")
@@ -109,6 +110,7 @@ function toggleModal(e) {
     .forEach(input => (input.value = ""));
   document.querySelector("textarea").value = "";
   document.querySelector(".modal").classList.add("hidden");
+  document.getElementById("modal-overlay").classList.add("hidden");
 }
 
 fetchData();
