@@ -574,14 +574,14 @@ article#dealers-container section div section section.certs-section p:nth-of-typ
 }
 
 article#dealers-container section div section section.certs-section p:nth-of-type(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: third;
 }
 
 article#dealers-container section div section section.certs-section p:nth-of-type(4) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: fourth;
 }
 
@@ -601,8 +601,8 @@ section.connect-container {
 }
 
 section.connect-container img {
+  max-width: 13em;
   height: 2em;
-  width: 13em;
   margin-top: 2em;
 }
 
@@ -623,10 +623,6 @@ section.connect-container .social-container .img-container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-section.connect-container .social-container .img-container img {
-  max-width: 3em;
 }
 
 /* =========================== */
@@ -730,6 +726,7 @@ footer a:hover {
 /* ==== Modal ==== */
 /* =========================== */
 .modal {
+  z-index: 1010;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -738,6 +735,8 @@ footer a:hover {
   width: 90%;
   max-height: 100%;
   text-align: justify;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @media (min-width: 900px) {
@@ -749,7 +748,18 @@ footer a:hover {
 .modal-close {
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 20px;
+  top: 10px;
+  z-index: 1200;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+@media (min-width: 900px) {
+  .modal-close {
+    font-size: 1.5em;
+  }
 }
 
 .modal img {
@@ -770,17 +780,26 @@ footer a:hover {
   color: #fff;
   margin: 0;
   top: 0;
+  display: inline;
+  text-align: justify;
+  padding-left: 2em;
+}
+
+.modal-container .modal-header h1 {
+  margin-top: -0.5em;
 }
 
 @media (min-width: 900px) {
   .modal-container .modal-header {
-    height: 75px;
+    height: 100px;
     padding-top: 0.7em;
   }
 }
 
 .modal-container section {
+  overflow: hidden;
   padding: 1em;
+  margin-top: 5em;
 }
 
 @media (min-width: 900px) {
@@ -788,6 +807,10 @@ footer a:hover {
     background-color: rgba(230, 230, 230, 0.5);
     padding: 1em;
   }
+}
+
+.modal-container section h3 {
+  font-weight: 300;
 }
 
 .modal-container section p {
@@ -799,10 +822,31 @@ footer a:hover {
           justify-content: space-between;
 }
 
+.modal-container section p:nth-of-type(2) {
+  max-width: 50%;
+}
+
+@media (min-width: 900px) {
+  .modal-container section p:nth-of-type(2) {
+    max-width: 40%;
+  }
+}
+
+.modal-container section input:nth-of-type(2) {
+  max-width: 50%;
+}
+
+@media (min-width: 900px) {
+  .modal-container section input:nth-of-type(2) {
+    max-width: 40%;
+  }
+}
+
 .modal-container section input,
 .modal-container section textarea {
   border: 1px solid rgba(150, 150, 150, 0.5);
   width: 100%;
+  padding: 0.5em;
 }
 
 .modal-container p.p-radio {
@@ -810,18 +854,17 @@ footer a:hover {
 }
 
 .modal-container div.modal-radios {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 25%;
-      grid-template-columns: 25%;
-      grid-template-areas: "primary secondary third fourth";
+  display: inline-block;
   border: none;
-  text-align: justify;
+  text-align: right;
   margin-left: 0.1em;
 }
 
 @media (min-width: 900px) {
   .modal-container div.modal-radios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: #f2f2f2;
     border-bottom: 1px solid rgba(150, 150, 150, 0.5);
     width: 100%;
@@ -829,37 +872,35 @@ footer a:hover {
   }
 }
 
-.modal-container div.modal-radios input:nth-of-type(1),
-.modal-container div.modal-radios label:nth-of-type(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: primary;
-  margin-top: 1em;
-}
-
-.modal-container div.modal-radios input:nth-of-type(2),
-.modal-container div.modal-radios label:nth-of-type(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: secondary;
-  margin-top: 1em;
+.modal-container div.modal-radios input,
+.modal-container div.modal-radios label {
+  margin-top: 2em;
+  width: 1em;
+  padding-right: 1em;
 }
 
 @media (min-width: 900px) {
-  .modal-container div.modal-radios {
-    -ms-grid-columns: 20% auto;
-        grid-template-columns: 20% auto;
+  .modal-container div.modal-radios input,
+  .modal-container div.modal-radios label {
+    position: relative;
+    right: 1.2em;
   }
+}
+
+@media (min-width: 900px) {
   .modal-container div.modal-radios label {
     border: 1px solid #000;
     border-radius: 2px;
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
     width: 3em;
+    -webkit-transition: background-color 1400ms ease-out;
+    transition: background-color 1400ms ease-out;
   }
   .modal-container div.modal-radios label:hover {
     background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
   }
-  .modal-container div.modal-radios label:active {
+  .modal-container div.modal-radios label:focus {
     background-color: #00ffaa;
     color: #fff;
   }
@@ -882,9 +923,13 @@ footer a:hover {
 
 .modal-container div.submit-div #modal-submit {
   border: none;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
   text-align: right;
   color: #00ffaa;
+}
+
+.modal-container div.submit-div #modal-submit:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 900px) {
@@ -893,7 +938,8 @@ footer a:hover {
     color: #000;
     font-weight: 900;
     padding: 2em;
-    background-color: rgba(230, 230, 230, 0.5);
+    position: relative;
+    right: 40px;
   }
 }
 
@@ -905,8 +951,9 @@ footer a:hover {
 @media (min-width: 900px) {
   .modal-container div.submit-div span.submit-text,
   .modal-container div.submit-div img {
-    display: inline;
-    text-align: left;
+    display: inline-block;
+    position: relative;
+    right: 390px;
   }
 }
 
@@ -921,5 +968,15 @@ footer a:hover {
     color: #000;
     padding-bottom: 2em;
   }
+}
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 /*# sourceMappingURL=style.css.map */

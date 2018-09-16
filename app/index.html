@@ -110,16 +110,16 @@
   </footer>
 
   <!-- Email Modal -->
-  <article class="modal">
+  <article class="modal hidden">
     <div class="modal-container">
-      <button class="modal-close">X</button>
+      <a class="modal-close" href="#" onClick="toggleModal()">X</a>
       <header class="modal-header">
         <p>Email</p>
         <!-- Pro Name -->
         <h1 class="modal-pro-name"></h1>
       </header>
       <section>
-        <p>Fill out the form below and <span class="modal-pro-name"></span> will get in touch.</p>
+        <h3>Fill out the form below and <span class="modal-pro-name"></span> will get in touch.</h3>
         <form class="modal-form" action="#">
           <p>First and last name
             <span class="modal-circle">
@@ -143,15 +143,19 @@
           <textarea name="comments" id="modal-comments" cols="20" rows="3" data-inputs="modal-input"></textarea>
           <p class="p-radio">Do you currently own a pool or spa?<span class="modal-optional">Optional</span></p>
           <div class="modal-radios">
-            <input type="radio" name="modal-radio" value="yes" />
-            <label for="yes">Yes</label>
-            <input type="radio" name="modal-radio" value="no" />
-            <label for="no">No</label>
+            <span>
+              <input type="radio" name="modal-radio" value="yes" />
+              <label tabindex="1" for="yes">Yes</label>
+            </span>
+            <span>
+              <input type="radio" name="modal-radio" value="no" />
+              <label tabindex="2" for="no">No</label>
+            </span>
           </div>
           <div class="submit-div">
-            <input type="submit" value="Send" id="modal-submit" />
-            <!-- <span class="submit-text">my email</span>
-            <img src="./assets/images/next-arrow.png" /> -->
+            <input type="submit" value="Send" id="modal-submit" onClick="toggleModal()" />
+            <span class="submit-text">my email</span>
+            <img src="./assets/images/next-arrow.png" />
           </div>
         </form>
       </section>
@@ -162,6 +166,9 @@
       </footer>
     </div>
   </article>
+
+  <div class="modal-overlay hidden" id="modal-overlay">
+  </div>
 
   <!-- JavaScript -->
   <script src="./main.js"></script>

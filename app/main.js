@@ -94,19 +94,23 @@ function certifications(data) {
 
 function contactDealerEvent(selectedPro) {
   document.querySelector(".modal").classList.remove("hidden");
+  document.getElementById("modal-overlay").classList.remove("hidden");
   let proName = selectedPro.value;
   document
     .querySelectorAll(".modal-pro-name")
     .forEach(el => (el.innerHTML = proName));
 }
 
-document.getElementById("modal-submit").addEventListener("click", e => {
-  e.preventDefault();
+function toggleModal(e) {
+  if (e) {
+    e.preventDefault();
+  }
   document
     .querySelectorAll('input[data-inputs="modal-input"')
     .forEach(input => (input.value = ""));
   document.querySelector("textarea").value = "";
   document.querySelector(".modal").classList.add("hidden");
-});
+  document.getElementById("modal-overlay").classList.add("hidden");
+}
 
 fetchData();
