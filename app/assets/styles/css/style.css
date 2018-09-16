@@ -844,16 +844,17 @@ footer a:hover {
 }
 
 .modal-container div.modal-radios {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   border: none;
-  text-align: justify;
+  text-align: right;
   margin-left: 0.1em;
 }
 
 @media (min-width: 900px) {
   .modal-container div.modal-radios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: #f2f2f2;
     border-bottom: 1px solid rgba(150, 150, 150, 0.5);
     width: 100%;
@@ -861,14 +862,19 @@ footer a:hover {
   }
 }
 
-.modal-container div.modal-radios input:nth-of-type(1),
-.modal-container div.modal-radios label:nth-of-type(1) {
-  margin-top: 1em;
+.modal-container div.modal-radios input,
+.modal-container div.modal-radios label {
+  margin-top: 2em;
+  width: 1em;
+  padding-right: 1em;
 }
 
-.modal-container div.modal-radios input:nth-of-type(2),
-.modal-container div.modal-radios label:nth-of-type(2) {
-  margin-top: 1em;
+@media (min-width: 900px) {
+  .modal-container div.modal-radios input,
+  .modal-container div.modal-radios label {
+    position: relative;
+    right: 1.2em;
+  }
 }
 
 @media (min-width: 900px) {
@@ -877,8 +883,8 @@ footer a:hover {
     border-radius: 2px;
     padding: 0.5em 1.5em;
     width: 3em;
-    -webkit-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
+    -webkit-transition: background-color 1400ms ease-out;
+    transition: background-color 1400ms ease-out;
   }
   .modal-container div.modal-radios label:hover {
     background-color: rgba(0, 0, 0, 0.4);

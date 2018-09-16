@@ -761,26 +761,29 @@ footer {
     }
 
     div.modal-radios {
-      display: flex;
+      display: inline-block;
       border: none;
-      text-align: justify;
+      text-align: right;
       margin-left: 0.1em;
 
       @include desktop {
+        display: flex;
         background-color: #f2f2f2;
         border-bottom: 1px solid color(accent-dark);
         width: 100%;
         padding-bottom: 1em;
       }
 
-      input:nth-of-type(1),
-      label:nth-of-type(1) {
-        margin-top: 1em;
-      }
+      input,
+      label {
+        margin-top: 2em;
+        width: 1em;
+        padding-right: 1em;
 
-      input:nth-of-type(2),
-      label:nth-of-type(2) {
-        margin-top: 1em;
+        @include desktop {
+          position: relative;
+          right: 1.2em;
+        }
       }
 
       @include desktop {
@@ -789,7 +792,7 @@ footer {
           border-radius: 2px;
           padding: 0.5em 1.5em;
           width: 3em;
-          transition: background-color 1s ease-out;
+          transition: background-color 1400ms ease-out;
         }
 
         label:hover {
