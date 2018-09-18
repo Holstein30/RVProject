@@ -10,7 +10,7 @@ $colors: (
 );
 
 // Media Query Sizes w/mixin for ease of use
-$desktop: 900px;
+$desktop: 910px;
 $desktop2: 1080px;
 $phone-lg: 450px;
 $phone-sm: 340px;
@@ -136,7 +136,7 @@ header {
       li {
         margin-bottom: 0.1em;
         padding: 1em;
-        background-color: color(accent-dark);
+        background-color: rgba(95, 94, 94, 0.9);
 
         @include desktop {
           background-color: rgba(255, 255, 255, 0);

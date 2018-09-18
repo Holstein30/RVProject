@@ -1,26 +1,26 @@
 ! TODO !
 
 * Priority
-** Fix Responsiveness between 900px - ~1200px
+** Fix Responsiveness between 900px - ~1200px - DONE
 ** Form Validation
 ** Add comments EVERYWHERE
 ** Add correct fonts & coloring
-** More crossbrowser testing & fixes
+** More crossbrowser testing & fixes - Partially Done
 ** Performance testing
 
 * Secondary
 ** Add missing icons
-** Refactor JS to be Object Oriented (plus more readable)
-** submit form information to local memory (or at least console)
-** Add links, hover, active for all anchors/buttons
+** Refactor JS to be more readable
+** submit form information to local memory (or at least console.log it)
+** Add links, hover, active for anchors/buttons - DONE
 ** Final testing and bug fixes
 
 *** Current Bugs ***
-* Responsiveness Between ~900px - ~1200px & Anything above ~1900px
-* Broken On Internet Explorer
+* Responsiveness Between ~900px - ~1200px & Anything above ~1900px - FIXED (except for banner width on wide screens)
+* Broken On Internet Explorer - Mostly works on Edge now (still some bugs and IE not so much)
 * Form Submit on Safari Not Working
 * Form Submitting even though required fields not entered 
     (I know this has to do with my JS event running before any form validation)
 * Some edge cases of filter being inprecise
 * Business hours needs to say off when not working
-* And many more...
+* To be continued...

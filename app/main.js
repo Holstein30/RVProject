@@ -11,6 +11,7 @@ function fetchData() {
   });
 }
 
+// Filter Dealers based on selected User filters for certifications
 function filterData(values, data) {
   let filter = data.dealers.map(dealer => {
     let certData = dealer.data.certifications;
@@ -41,6 +42,7 @@ function filterData(values, data) {
   renderData(filteredResults);
 }
 
+// Determine whether a filter checkbox is checked or not
 function checkboxValue(data) {
   let checkboxes = document.querySelectorAll(
       'input[name="filter-checkbox"]:checked'
@@ -52,6 +54,7 @@ function checkboxValue(data) {
   filterData(values, data);
 }
 
+// Render the Dealers cards to the page(initial and after filtering)
 function renderData(data) {
   let numDealers = document.getElementById("num-dealers");
   numDealers.innerHTML = data.length;
@@ -85,6 +88,7 @@ function renderData(data) {
   dealerContainer.innerHTML = dealerList;
 }
 
+// Return the certfications of each dealer without punctuation
 function certifications(data) {
   let returnCerts = data.map(cert => {
     return `<p>${cert}</p>`;
@@ -92,6 +96,7 @@ function certifications(data) {
   return returnCerts.join("");
 }
 
+// Open Modal once a user clicks to contact a Dealer
 function contactDealerEvent(selectedPro) {
   document.querySelector(".modal").classList.remove("hidden");
   document.getElementById("modal-overlay").classList.remove("hidden");
@@ -101,6 +106,7 @@ function contactDealerEvent(selectedPro) {
     .forEach(el => (el.innerHTML = proName));
 }
 
+// Toggle the Modal back to hidden after User submits form or X's out of Modal
 function toggleModal(e) {
   if (e) {
     e.preventDefault();
